@@ -85,7 +85,6 @@ class DownloadQueue:
                 print(f'{datetime.now()} - Nenhum download pendente')
 
             for row in rows:
-
                 print(f'{datetime.now()} - Filtrando arquivos para download ...')
                 records = driver.execute_script("return document.querySelectorAll('.row')")
                 _id = '[id^="downloadButton_"]'

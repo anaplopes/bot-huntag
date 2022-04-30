@@ -59,7 +59,11 @@ class DirFileUtil:
     def copy_file(self, source:str, destiny:str):
         _source = self.exists(path=source)
         if _source:
-            shutil.copy(src=source, dst=destiny)
+            try:
+                shutil.copy(src=source, dst=destiny)
+            except IOError as io_err:
+                self.create_dirs(dirname=destiny)
+                shutil.copy(src=source, dst=destiny)
             return True
         return False
     

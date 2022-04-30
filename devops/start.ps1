@@ -1,4 +1,4 @@
-$host.ui.RawUI.WindowTitle = 'Download'
+$host.ui.RawUI.WindowTitle = 'Start'
 CD\
 C:
 cd bot-huntag

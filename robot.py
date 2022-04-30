@@ -4,7 +4,6 @@ import os
 import time
 from math import ceil
 from datetime import datetime
-from unicodedata import name
 from selenium import webdriver
 from unidecode import unidecode
 from utils.dirfile import DirFileUtil
@@ -15,7 +14,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class Gallery:
+class Robot:
 
     def __init__(self):
         self.db = DbConnection()
@@ -194,7 +193,7 @@ class Gallery:
                             if be_downloaded:
                                 continue
 
-                            print(f'{datetime.now()} - Baixando arquivo ...')
+                            print(f'{datetime.now()} - Baixando arquivo {name} ...')
                             item.click()
                         
                             time.sleep(20) # 20 segundos
@@ -248,5 +247,5 @@ class Gallery:
             except Exception:
                 pass
 
-robot = Gallery()
-robot.run()
+bot = Robot()
+bot.run()
