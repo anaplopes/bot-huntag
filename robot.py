@@ -179,7 +179,7 @@ class Robot:
                     records[idx].click()
 
                     time.sleep(5)
-                    item_name = driver.execute_script("return document.querySelector('.item h3').textContent")
+                    item_name = driver.execute_script("return document.querySelector('.item h3').textContent").strip()
 
                     try:
                         download = driver.execute_script("return document.querySelectorAll('.item-download a')")
@@ -187,7 +187,7 @@ class Robot:
 
                         for index, item in enumerate(download):
                             name = titulo[index].text
-                            file_name = unidecode(name).replace('\n', '_').replace(' ', '+')
+                            file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+')
 
                             be_downloaded = self.db.select_filter(table='download_control', where=f'filename = "{file_name}"')
                             if be_downloaded:
