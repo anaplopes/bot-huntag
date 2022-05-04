@@ -4,6 +4,8 @@ import os
 import time
 from math import ceil
 from datetime import datetime
+from turtle import down
+from unicodedata import category
 from selenium import webdriver
 from unidecode import unidecode
 from utils.dirfile import DirFileUtil
@@ -94,12 +96,12 @@ class Robot:
             raise Exception(f'Search Error: {error}')
 
 
-    def download_control(self, item_name:str, filename:str, category:str, status:str):
+    def download_control(self, category:str, item_name:str, fileId:str, file_name:str, status:str):
         try:
             self.db.insert(
                 table='download_control',
-                columns='item_name, filename, category, status, created_on',
-                values=f'"{item_name}", "{filename}", "{category}", "{status}", "{datetime.now().strftime("%d/%m/%Y %H:%M")}"')
+                columns='category, itemName, fileId, fileName, status, createdOn',
+                values=f'"{category}", "{item_name}", "{fileId}", "{file_name}", "{status}", "{datetime.now().strftime("%d/%m/%Y %H:%M")}"')
 
         except Exception as e:
             error = str(e)
@@ -107,33 +109,26 @@ class Robot:
             raise Exception(f'Download Control Error: {error}')
 
 
-    def moved_file(self, filename:str, item_name:str, title:str):
+    def moved_file(self, item_name:str, file_id: str, file_name:str, category:str):
         try:
-            moved = False
             dir_download = 'C:/Users/diana/Downloads'
-            dir_hd = f'E:/HUNTAG/{title}/{item_name}'
+            dir_hd = f'E:/HUNTAG/{category}/{item_name}'
         
             self.dirfile.create_dirs(dirname=dir_hd)
             
             for root, dirs, files in os.walk(dir_download):
                 for name in files:
-                    if name.startswith(filename.split('.')[0]):
+                    if name.startswith(file_name.split('.')[0]):
                         self.dirfile.copy_file(source=f'{dir_download}/{name}', destiny=f'{dir_hd}')
 
                         print(f'{datetime.now()} - Inserindo no controle de download ...')
-                        self.download_control(item_name=item_name, filename=filename, category=title, status="Arquivo baixado")
-                        moved = True
+                        self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=name, status="Arquivo baixado")
 
                         time.sleep(5)
                         self.dirfile.delete_file(filename=f'{dir_download}/{name}')
 
                         time.sleep(5)
                         break
-
-            if not moved:
-                print(f'{datetime.now()} - Inserindo no controle de download ...')
-                self.download_control(item_name=item_name, filename=filename, category=title, status="Arquivo não movido")
-
 
         except Exception as e:
             error = str(e)
@@ -160,20 +155,21 @@ class Robot:
                 sub3 = f'/{row["subcategoria3"]}' if row["subcategoria3"] else ''
                 sub4 = f'/{row["subcategoria4"]}' if row["subcategoria4"] else ''
                 sub5 = f'/{row["subcategoria5"]}' if row["subcategoria5"] else ''
-                title = f'{sub1}{sub2}{sub3}{sub4}{sub5}'
+                category = f'{sub1}{sub2}{sub3}{sub4}{sub5}'
                 
-                print(f'{datetime.now()} - Pesquisando {title} ...')
+                print(f'{datetime.now()} - Pesquisando {category} ...')
                 self.search(driver=driver, row=row)
                 
                 time.sleep(5)
                 records = driver.execute_script("return document.getElementsByClassName('item active')")
                 txt_records_search = driver.execute_script("return document.querySelectorAll('.text-center h2')[0].textContent")
+
                 total_records_search = int(re.findall(r'\d+', txt_records_search)[0])
                 qtd_records_page = len(records)
                 qtd_page = ceil(total_records_search / 30)
                 idx = 0
-                while qtd_records_page > 0:
 
+                while qtd_records_page > 0:
                     time.sleep(5)
                     print(f'{datetime.now()} - Selecionar registro {idx + 1} de {len(records)} ...')
                     records[idx].click()
@@ -186,19 +182,27 @@ class Robot:
                         titulo = driver.execute_script("return document.getElementsByClassName('panel-footer title ellipsis')")
 
                         for index, item in enumerate(download):
+                            print(f'{datetime.now()} - Baixando arquivo {index + 1} de {len(download)} ...')
+
                             name = titulo[index].text
                             file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+')
+                            file_name = re.sub(r"m2+", "m²", file_name)
 
-                            be_downloaded = self.db.select_filter(table='download_control', where=f'filename = "{file_name}"')
+                            file_href = item.get_attribute('href')
+                            file_id = re.sub(r"\D", "", file_href)
+
+                            be_downloaded = self.db.select_filter(table='download_control', where=f'fileId = "{file_id}"')
                             if be_downloaded:
+                                print(f'{datetime.now()} - Arquivo ja baixado {name} ...')
                                 continue
 
+                            time.sleep(5)
                             print(f'{datetime.now()} - Baixando arquivo {name} ...')
                             item.click()
-                        
+
                             time.sleep(20) # 20 segundos
-                            print(f'{datetime.now()} - Movendo arquivo {name} ...')
-                            self.moved_file(filename=file_name, item_name=item_name, title=title)
+                            print(f'{datetime.now()} - Movendo arquivo {file_name} ...')
+                            self.moved_file(item_name=item_name, file_id=file_id, file_name=file_name, category=category)
                         
                         time.sleep(5)
                         print(f'{datetime.now()} - Voltando a pagina ...')
@@ -216,15 +220,15 @@ class Robot:
                             idx = 0
 
                         else:
-                            time.sleep(5)
+                            time.sleep(10)
                             qtd_records_page -= 1
                             idx += 1
                             records = driver.execute_script("return document.getElementsByClassName('item active')")
 
                     except Exception as e:
                         error = str(e)
-                        print(f'Run Error: {error}')
-                        self.download_control(item_name=item_name, filename='', category=title, status=f'Run Error: {error}')
+                        print(error)
+                        self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=file_name, status=error)
                         pass
                     
                 time.sleep(5)
