@@ -184,7 +184,7 @@ class Robot:
                                 print(f'{datetime.now()} - Arquivo {index + 1} de {len(download)} ...')
 
                                 name = titulo[index].text
-                                file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+').replace('"', '”')
+                                file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+')
                                 file_name = re.sub(r"m2+", "m²", file_name)
 
                                 file_href = item.get_attribute('href')
