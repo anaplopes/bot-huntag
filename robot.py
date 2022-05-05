@@ -190,7 +190,7 @@ class Robot:
                                 file_href = item.get_attribute('href')
                                 file_id = re.sub(r"\D", "", file_href)
 
-                                be_downloaded = self.db.select_filter(table='download_control', where=f'fileId == "{file_id}" and status == "Arquivo baixado"')
+                                be_downloaded = self.db.select_filter(table='download_control', where=f'fileId == "{file_id}"')
                                 if be_downloaded:
                                     print(f'{datetime.now()} - Arquivo ja baixado {name} ...')
                                     continue
