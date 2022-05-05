@@ -1,1 +1,1 @@
-update schedule set isActive = "true"
+update schedule set isActive == "true"

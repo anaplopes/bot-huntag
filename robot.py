@@ -46,9 +46,7 @@ class Robot:
             driver.find_element(By.XPATH, '//input[@type="submit"][@value="Login"]').submit()
 
         except Exception as e:
-            error = str(e)
-            print(f'Login Error: {error}')
-            raise Exception(f'Login Error: {error}')
+            raise Exception(f'Login Error: {str(e)}')
 
 
     def search(self, driver, row):
@@ -91,9 +89,7 @@ class Robot:
             driver.find_element(By.ID, 'SearchButton').click()
 
         except Exception as e:
-            error = str(e)
-            print(f'Search Error: {error}')
-            raise Exception(f'Search Error: {error}')
+            raise Exception(f'Search Error: {str(e)}')
 
 
     def download_control(self, category:str, item_name:str, fileId:str, file_name:str, status:str):
@@ -104,36 +100,38 @@ class Robot:
                 values=f'"{category}", "{item_name}", "{fileId}", "{file_name}", "{status}", "{datetime.now().strftime("%d/%m/%Y %H:%M")}"')
 
         except Exception as e:
-            error = str(e)
-            print(f'Download Control Error: {error}')
-            raise Exception(f'Download Control Error: {error}')
+            raise Exception(f'Download Control Error: {str(e)}')
 
 
     def moved_file(self, item_name:str, file_id: str, file_name:str, category:str):
         try:
-            dir_download = 'C:/Users/diana/Downloads'
-            dir_hd = f'E:/HUNTAG/{category}/{item_name}'
+            dir_download = 'C:/Users/diana/Downloads/'
+            dir_destiny = f'E:/HUNTAG/{category}/{item_name}/'
         
-            self.dirfile.create_dirs(dirname=dir_hd)
+            self.dirfile.create_dirs(dirname=dir_destiny)
             
+            found_file = False
             for root, dirs, files in os.walk(dir_download):
                 for name in files:
-                    if name.startswith(file_name.split('.')[0]):
-                        self.dirfile.copy_file(source=f'{dir_download}/{name}', destiny=f'{dir_hd}')
+                    if name.split('.')[0] == file_name:
+                        src = f'{dir_download}/{name}'
+                        self.dirfile.copy_file(source=src, destiny=r'{dir_destiny}')
 
                         print(f'{datetime.now()} - Inserindo no controle de download ...')
                         self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=name, status="Arquivo baixado")
 
                         time.sleep(5)
-                        self.dirfile.delete_file(filename=f'{dir_download}/{name}')
+                        self.dirfile.delete_file(filename=src)
 
                         time.sleep(5)
+                        found_file = True
                         break
 
+            if not found_file:
+                raise Exception('Arquivo não localizado no diretorio Downloads')
+
         except Exception as e:
-            error = str(e)
-            print(f'Moved File Error: {error}')
-            raise Exception(f'Moved File Error: {error}')
+            raise Exception(f'Moved File Error: {str(e)}')
 
 
     def run(self):
@@ -170,46 +168,52 @@ class Robot:
                 idx = 0
 
                 while qtd_records_page > 0:
-                    time.sleep(5)
-                    print(f'{datetime.now()} - Selecionar registro {idx + 1} de {len(records)} ...')
-                    records[idx].click()
-
-                    time.sleep(5)
-                    item_name = driver.execute_script("return document.querySelector('.item h3').textContent").strip()
-
                     try:
+                        time.sleep(5)
+                        print(f'{datetime.now()} - Selecionar registro {idx + 1} de {len(records)} ...')
+                        records[idx].click()
+
+                        time.sleep(5)
+                        item_name = driver.execute_script("return document.querySelector('.item h3').textContent").strip()
+
                         download = driver.execute_script("return document.querySelectorAll('.item-download a')")
                         titulo = driver.execute_script("return document.getElementsByClassName('panel-footer title ellipsis')")
 
                         for index, item in enumerate(download):
-                            print(f'{datetime.now()} - Baixando arquivo {index + 1} de {len(download)} ...')
+                            try:
+                                print(f'{datetime.now()} - Arquivo {index + 1} de {len(download)} ...')
 
-                            name = titulo[index].text
-                            file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+')
-                            file_name = re.sub(r"m2+", "m²", file_name)
+                                name = titulo[index].text
+                                file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+').replace('"', '”')
+                                file_name = re.sub(r"m2+", "m²", file_name)
 
-                            file_href = item.get_attribute('href')
-                            file_id = re.sub(r"\D", "", file_href)
+                                file_href = item.get_attribute('href')
+                                file_id = re.sub(r"\D", "", file_href)
 
-                            be_downloaded = self.db.select_filter(table='download_control', where=f'fileId = "{file_id}"')
-                            if be_downloaded:
-                                print(f'{datetime.now()} - Arquivo ja baixado {name} ...')
+                                be_downloaded = self.db.select_filter(table='download_control', where=f'fileId == "{file_id}" and status == "Arquivo baixado"')
+                                if be_downloaded:
+                                    print(f'{datetime.now()} - Arquivo ja baixado {name} ...')
+                                    continue
+
+                                time.sleep(5)
+                                print(f'{datetime.now()} - Baixando {name} ...')
+                                item.click()
+
+                                time.sleep(20) # 20 segundos
+                                print(f'{datetime.now()} - Movendo arquivo {file_name} ...')
+                                self.moved_file(item_name=item_name, file_id=file_id, file_name=file_name, category=category)
+
+                            except Exception as e:
+                                error = str(e)
+                                print(error)
+                                self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=file_name, status=error)
                                 continue
-
-                            time.sleep(5)
-                            print(f'{datetime.now()} - Baixando arquivo {name} ...')
-                            item.click()
-
-                            time.sleep(20) # 20 segundos
-                            print(f'{datetime.now()} - Movendo arquivo {file_name} ...')
-                            self.moved_file(item_name=item_name, file_id=file_id, file_name=file_name, category=category)
                         
                         time.sleep(5)
                         print(f'{datetime.now()} - Voltando a pagina ...')
                         driver.find_element(By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]').click()
 
                         if qtd_page > 1 and qtd_records_page == 1:
-                            time.sleep(5)
                             print(f'{datetime.now()} - Indo para proxima pagina ...')
                             next_page = driver.execute_script("return document.getElementsByClassName('fa fa-chevron-right')")
                             next_page[0].click()
@@ -228,8 +232,8 @@ class Robot:
                     except Exception as e:
                         error = str(e)
                         print(error)
-                        self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=file_name, status=error)
-                        pass
+                        self.download_control(category=category, item_name=item_name, fileId="", file_name="", status=error)
+                        continue
                     
                 time.sleep(5)
                 print(f'{datetime.now()} - Voltando a Home Page ...')

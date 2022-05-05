@@ -1,1 +1,1 @@
-update schedule set isActive = "true" where subcategoria3 == "Micro Merchan"
+update schedule set isActive == "true" where subcategoria3 == "Micro Merchan"
