@@ -4,8 +4,6 @@ import os
 import time
 from math import ceil
 from datetime import datetime
-from turtle import down
-from unicodedata import category
 from selenium import webdriver
 from unidecode import unidecode
 from utils.dirfile import DirFileUtil
@@ -105,8 +103,8 @@ class Robot:
 
     def moved_file(self, item_name:str, file_id: str, file_name:str, category:str):
         try:
-            dir_download = 'C:/Users/diana/Downloads/'
-            dir_destiny = f'E:/HUNTAG/{category}/{item_name}/'
+            dir_download = 'C:/Users/diana/Downloads'
+            dir_destiny = f'C:/Huntag/{category}/{item_name}'
         
             self.dirfile.create_dirs(dirname=dir_destiny)
             
@@ -115,13 +113,12 @@ class Robot:
                 for name in files:
                     if name.split('.')[0] == file_name:
                         src = f'{dir_download}/{name}'
-                        self.dirfile.copy_file(source=src, destiny=r'{dir_destiny}')
+                        dst = f'{dir_destiny}/{file_name}'
+                        # self.dirfile.copy_file(source=src, destiny=dir_destiny)
+                        self.dirfile.move_file(source=src, destiny=dst)
 
                         print(f'{datetime.now()} - Inserindo no controle de download ...')
                         self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=name, status="Arquivo baixado")
-
-                        time.sleep(5)
-                        self.dirfile.delete_file(filename=src)
 
                         time.sleep(5)
                         found_file = True
@@ -184,7 +181,7 @@ class Robot:
                                 print(f'{datetime.now()} - Arquivo {index + 1} de {len(download)} ...')
 
                                 name = titulo[index].text
-                                file_name = unidecode(name.strip()).replace('\n', '_').replace(' ', '+')
+                                file_name = unidecode(name.strip().replace('\n', '_')).replace(' ', '+')
                                 file_name = re.sub(r"m2+", "m²", file_name)
 
                                 file_href = item.get_attribute('href')
