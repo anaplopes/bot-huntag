@@ -2,10 +2,10 @@
 import re
 import os
 import time
+import unicodedata
 from math import ceil
 from datetime import datetime
 from selenium import webdriver
-from unidecode import unidecode
 from utils.dirfile import DirFileUtil
 from selenium.webdriver.common.by import By
 from database.db_connection import DbConnection
@@ -54,30 +54,30 @@ class Robot:
             categoria.select_by_visible_text('Merchandising')
 
             # selecionar subcategoria
-            time.sleep(5)
+            time.sleep(3)
             subcategorias = driver.find_elements(By.XPATH, '//div[@id="subCategoriesDiv"]/select[@class="form-control"]')
             subcategoria_1 = Select(subcategorias[0])
             subcategoria_1.select_by_visible_text(row['subcategoria1'])
 
-            time.sleep(5)
+            time.sleep(3)
             subcategorias = driver.find_elements(By.XPATH, '//div[@id="subCategoriesDiv"]/select[@class="form-control"]')
             subcategoria_2 = Select(subcategorias[1])
             subcategoria_2.select_by_visible_text(row['subcategoria2'])
 
             if row['subcategoria3']:
-                time.sleep(5)
+                time.sleep(3)
                 subcategorias = driver.find_elements(By.XPATH, '//div[@id="subCategoriesDiv"]/select[@class="form-control"]')
                 subcategoria_3 = Select(subcategorias[2])
                 subcategoria_3.select_by_visible_text(row['subcategoria3'])
 
             if row['subcategoria4']:
-                time.sleep(5)
+                time.sleep(3)
                 subcategorias = driver.find_elements(By.XPATH, '//div[@id="subCategoriesDiv"]/select[@class="form-control"]')
                 subcategoria_4 = Select(subcategorias[3])
                 subcategoria_4.select_by_visible_text(row['subcategoria4'])
 
             if row['subcategoria5']:
-                time.sleep(5)
+                time.sleep(3)
                 subcategorias = driver.find_elements(By.XPATH, '//div[@id="subCategoriesDiv"]/select[@class="form-control"]')
                 subcategoria_5 = Select(subcategorias[4])
                 subcategoria_5.select_by_visible_text(row['subcategoria5'])
@@ -104,23 +104,28 @@ class Robot:
     def moved_file(self, item_name:str, file_id: str, file_name:str, category:str):
         try:
             dir_download = 'C:/Users/diana/Downloads'
-            dir_destiny = f'C:/Huntag/{category}/{item_name}'
+            dir_destiny = f'E:/HUNTAG/{category}/{item_name}'
         
             self.dirfile.create_dirs(dirname=dir_destiny)
             
             found_file = False
             for root, dirs, files in os.walk(dir_download):
                 for name in files:
-                    if name.split('.')[0] == file_name:
+                    new_name = unicodedata.normalize('NFD', name.strip()).encode('ascii', 'ignore').decode('utf8').replace('"', "'")
+                    new_name = re.sub(r"m2+", "m²", new_name)
+                    
+                    if new_name.split('.')[0] == file_name:
+                        os.rename(src=f'{dir_download}/{name}', dst=f'{dir_download}/{new_name}')
+
                         src = f'{dir_download}/{name}'
-                        dst = f'{dir_destiny}/{file_name}'
+                        dst = f'{dir_destiny}/{name}'
                         # self.dirfile.copy_file(source=src, destiny=dir_destiny)
                         self.dirfile.move_file(source=src, destiny=dst)
 
+                        time.sleep(3)
                         print(f'{datetime.now()} - Inserindo no controle de download ...')
                         self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=name, status="Arquivo baixado")
 
-                        time.sleep(5)
                         found_file = True
                         break
 
@@ -145,12 +150,8 @@ class Robot:
                 print(f'{datetime.now()} - Nenhuma execução programada')
 
             for row in rows:
-                sub1 = row["subcategoria1"]
-                sub2 = f'/{row["subcategoria2"]}' if row["subcategoria2"] else ''
-                sub3 = f'/{row["subcategoria3"]}' if row["subcategoria3"] else ''
-                sub4 = f'/{row["subcategoria4"]}' if row["subcategoria4"] else ''
-                sub5 = f'/{row["subcategoria5"]}' if row["subcategoria5"] else ''
-                category = f'{sub1}{sub2}{sub3}{sub4}{sub5}'
+                ctg = [v for k, v in row.items() if k.startswith('subcategoria') and v]
+                category = unicodedata.normalize('NFD', '/'.join(ctg)).encode('ascii', 'ignore').decode('utf8')
                 
                 print(f'{datetime.now()} - Pesquisando {category} ...')
                 self.search(driver=driver, row=row)
@@ -158,7 +159,7 @@ class Robot:
                 time.sleep(5)
                 records = driver.execute_script("return document.getElementsByClassName('item active')")
                 txt_records_search = driver.execute_script("return document.querySelectorAll('.text-center h2')[0].textContent")
-
+                
                 total_records_search = int(re.findall(r'\d+', txt_records_search)[0])
                 qtd_records_page = len(records)
                 qtd_page = ceil(total_records_search / 30)
@@ -166,12 +167,12 @@ class Robot:
 
                 while qtd_records_page > 0:
                     try:
-                        time.sleep(5)
                         print(f'{datetime.now()} - Selecionar registro {idx + 1} de {len(records)} ...')
                         records[idx].click()
 
-                        time.sleep(5)
-                        item_name = driver.execute_script("return document.querySelector('.item h3').textContent").strip()
+                        time.sleep(3)
+                        item_name = driver.execute_script("return document.querySelector('.item h3').textContent")
+                        item_name = unicodedata.normalize('NFD', item_name.strip()).encode('ascii', 'ignore').decode('utf8')
 
                         download = driver.execute_script("return document.querySelectorAll('.item-download a')")
                         titulo = driver.execute_script("return document.getElementsByClassName('panel-footer title ellipsis')")
@@ -181,22 +182,21 @@ class Robot:
                                 print(f'{datetime.now()} - Arquivo {index + 1} de {len(download)} ...')
 
                                 name = titulo[index].text
-                                file_name = unidecode(name.strip().replace('\n', '_')).replace(' ', '+')
+                                file_name = unicodedata.normalize('NFD', name.strip()).encode('ascii', 'ignore').decode('utf8').replace('\n', '_').replace('"', "'").replace(' ', '+')
                                 file_name = re.sub(r"m2+", "m²", file_name)
 
                                 file_href = item.get_attribute('href')
                                 file_id = re.sub(r"\D", "", file_href)
 
                                 be_downloaded = self.db.select_filter(table='download_control', where=f'fileId == "{file_id}"')
-                                if be_downloaded:
+                                if be_downloaded: 
                                     print(f'{datetime.now()} - Arquivo ja baixado {name} ...')
                                     continue
 
-                                time.sleep(5)
                                 print(f'{datetime.now()} - Baixando {name} ...')
                                 item.click()
 
-                                time.sleep(20) # 20 segundos
+                                time.sleep(600) # 10 minutos
                                 print(f'{datetime.now()} - Movendo arquivo {file_name} ...')
                                 self.moved_file(item_name=item_name, file_id=file_id, file_name=file_name, category=category)
 
@@ -206,7 +206,6 @@ class Robot:
                                 self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=file_name, status=error)
                                 continue
                         
-                        time.sleep(5)
                         print(f'{datetime.now()} - Voltando a pagina ...')
                         driver.find_element(By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]').click()
 
@@ -215,13 +214,14 @@ class Robot:
                             next_page = driver.execute_script("return document.getElementsByClassName('fa fa-chevron-right')")
                             next_page[0].click()
                             
+                            time.sleep(5)
                             records = driver.execute_script("return document.getElementsByClassName('item active')")
                             qtd_records_page = len(records)
                             qtd_page -= 1
                             idx = 0
 
                         else:
-                            time.sleep(10)
+                            time.sleep(5)
                             qtd_records_page -= 1
                             idx += 1
                             records = driver.execute_script("return document.getElementsByClassName('item active')")
