@@ -2,14 +2,14 @@
 import sqlite3
 
 
-class DbConnection:
+class ConnectionDB:
 
     def __init__(self):
         self.conn = sqlite3.connect('huntag.db')
         self.cursor = self.conn.cursor()
 
 
-    def insert(self, table:str, columns:str, values:str):
+    def insert(self, table:str, columns:str, values:str) -> str:
         ''' inserindo um registro na tabela '''
         
         query = f"INSERT INTO {table} ({columns}) VALUES ({values})"
@@ -18,7 +18,7 @@ class DbConnection:
         return 'Dado inserido com sucesso.'
 
 
-    def select_all(self, table:str):
+    def select_all(self, table:str) -> list:
         ''' lendo todos os dados '''
 
         query = f"SELECT * FROM {table}"
@@ -27,7 +27,7 @@ class DbConnection:
         return [dict(zip(columns, row)) for row in tb.fetchall()]
 
 
-    def select_filter(self, table:str, where:str, limit:int=None):
+    def select_filter(self, table:str, where:str, limit:int=None) -> list:
         ''' filtrando os dados '''
 
         query = f"SELECT * FROM {table} WHERE {where}"
@@ -40,7 +40,7 @@ class DbConnection:
         return [dict(zip(columns, row)) for row in tb.fetchall()]
 
 
-    def update(self, table:str, col_val:str, where:str): 
+    def update(self, table:str, col_val:str, where:str) -> str: 
         ''' atualizando registros '''
 
         query = f"UPDATE {table} SET {col_val} WHERE {where}"

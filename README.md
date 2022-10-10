@@ -1,1 +1,1 @@
-# bot-huntag
+# Bot Huntag

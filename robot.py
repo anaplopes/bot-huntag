@@ -2,14 +2,13 @@
 import re
 import os
 import time
-import traceback
 import unicodedata
 from math import ceil
 from datetime import datetime
 from selenium import webdriver
-from utils.dirfile import DirFileUtil
 from selenium.webdriver.common.by import By
-from database.db_connection import DbConnection
+from utils.operating import OperatingSystem
+from database.connection import ConnectionDB
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -18,8 +17,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 class Robot:
 
     def __init__(self):
-        self.db = DbConnection()
-        self.dirfile = DirFileUtil()
+        self.db = ConnectionDB()
+        self.opsys = OperatingSystem()
 
 
     def config(self):
@@ -39,9 +38,9 @@ class Robot:
 
     def login(self, driver):
         try:
-            driver.get('https://app.huntag.com.br/Login')
-            driver.find_element(By.ID, 'Email').send_keys('diana.godoi@grupotj.com.br')
-            driver.find_element(By.ID, 'Password').send_keys('Tj123456?')
+            driver.get(os.getenv('HUNTAG_URL'))
+            driver.find_element(By.ID, 'Email').send_keys(os.getenv('EMAIL'))
+            driver.find_element(By.ID, 'Password').send_keys(os.getenv('PASSWORD'))
             driver.find_element(By.XPATH, '//input[@type="submit"][@value="Login"]').submit()
 
         except Exception as e:
@@ -104,24 +103,24 @@ class Robot:
 
     def moved_file(self, item_name:str, file_id: str, file_name:str, category:str):
         try:
-            dir_download = 'C:/Users/diana/Downloads'
-            dir_destiny = f'E:/HUNTAG/{category}/{item_name}'
+            dir_download = os.getenv('PATH_DIR_DOWNLOAD')
+            dir_target = f'{os.getenv("PATH_DIR_TARGET")}/{category}/{item_name}'
         
-            self.dirfile.create_dirs(dirname=dir_destiny)
+            self.opsys.create_dirs(dirname=dir_target)
             
             found_file = False
             for root, dirs, files in os.walk(dir_download, topdown=False):
                 for name in files:
                     if name.split('.')[0] == file_name:
                         src = os.path.join(root, name)
-                        # self.dirfile.move_file(source=src, destiny=dst)
-                        self.dirfile.copy_file(source=src, destiny=dir_destiny)
+                        # self.opsys.move_file(source=src, destiny=dst)
+                        self.opsys.copy_file(source=src, destiny=dir_target)
 
                         time.sleep(3)
                         print(f'{datetime.now()} - Inserindo no controle de download ...')
                         self.download_control(category=category, item_name=item_name, fileId=file_id, file_name=name, status="Arquivo baixado")
                         found_file = True
-                        self.dirfile.delete_file(filename=src)
+                        self.opsys.delete_file(filename=src)
                         break
 
             if not found_file:
