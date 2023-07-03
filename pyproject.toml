@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "bot-huntag"
+version = "1.0.0"
+description = "Robo de scraping do site Huntag"
+authors = ["anaplopes <anapalopes0103@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bot_huntag"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.10.0"
+webdriver-manager = "^3.8.6"
+msgraph-sdk = "^1.0.0a13"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+
+
+[tool.black]
+line-length = 79
+target-version = [ 'py38' ]
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations
+    | version
+  )
+)
+'''
+
+
+[tool.isort]
+line_length = 79
+known_first_party = 'model_catalog'
+multi_line_output = 3
+use_parentheses = true
+include_trailing_comma = true
+skip_glob = [ '**migrations**' ]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
