@@ -1,47 +1,56 @@
-# -*- coding: utf-8 -*-
-import sqlite3
+from sqlalchemy import Engine, create_engine
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.orm import Session, sessionmaker
+
+from src.model.base import Base
+from src.settings import settings
+from utils.logger import logger
 
 
-class ConnectionDB:
-    def __init__(self):
-        self.conn = sqlite3.connect("sqlite.db")
-        self.cursor = self.conn.cursor()
+class DatabaseConnection:
+    def __init__(self) -> None:
+        self.__engine = self.create_connect()
 
-    def insert(self, table: str, columns: str, values: str) -> str:
-        """inserindo um registro na tabela"""
+    def __str_url(self) -> str:
+        engine = settings.DATABASE_ENGINE
+        user = settings.DATABASE_USER
+        password = settings.DATABASE_PASSWORD
+        host = settings.DATABASE_HOST
+        port = settings.DATABASE_PORT
+        name = settings.DATABASE_NAME
+        return f"{engine}://{user}:{password}@{host}:{port}/{name}"
 
-        query = f"INSERT INTO {table} ({columns}) VALUES ({values})"
-        self.cursor.execute(query)
-        self.conn.commit()  # gravando no bd
-        return "Dado inserido com sucesso."
+    def create_connect(self) -> Engine:
+        try:
+            logger.info("Connecting to database...")
+            conn = create_engine(url=self.__str_url(), echo=settings.DEBUG)
+        except Exception as error:
+            e = str(error)
+            logger.exception(f"Engine connection error: {e}")
+            raise SQLAlchemyError(f"Engine connection error: {e}")
+        else:
+            logger.info("Connected to database.")
+            return conn
 
-    def select_all(self, table: str) -> list:
-        """lendo todos os dados"""
+    def __session_factory(self) -> Session:
+        session = sessionmaker(
+            autocommit=False, autoflush=False, bind=self.__engine
+        )
+        return session()
 
-        query = f"SELECT * FROM {table}"
-        tb = self.cursor.execute(query)
-        columns = [i[0] for i in tb.description]
-        return [dict(zip(columns, row)) for row in tb.fetchall()]
+    def create_data_model(self) -> None:
+        logger.info("Creating tables...")
+        Base.metadata.create_all(self.__engine)
 
-    def select_filter(self, table: str, where: str, limit: int = None) -> list:
-        """filtrando os dados"""
-
-        query = f"SELECT * FROM {table} WHERE {where}"
-
-        if limit:
-            query = f"SELECT * FROM {table} WHERE {where} LIMIT {limit}"
-
-        tb = self.cursor.execute(query)
-        columns = [i[0] for i in tb.description]
-        return [dict(zip(columns, row)) for row in tb.fetchall()]
-
-    def update(self, table: str, col_val: str, where: str) -> str:
-        """atualizando registros"""
-
-        query = f"UPDATE {table} SET {col_val} WHERE {where}"
-        self.cursor.execute(query)
-        self.conn.commit()  # gravando no bd
-        return "Dados atualizados com sucesso."
-
-    def finish(self):
-        self.conn.close()
+    def get_session(self):
+        session: Session = self.__session_factory()
+        try:
+            yield session
+        except Exception as error:
+            e = str(error)
+            logger.exception(f"Session rollback: {e}")
+            session.rollback()
+            raise SQLAlchemyError(f"Session rollback: {e}")
+        finally:
+            session.close()
+            self.__engine.dispose()
