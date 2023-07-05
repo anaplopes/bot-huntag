@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from src.model.base import Base
 from src.settings import settings
-from utils.logger import logger
+from src.utils.logger import logger
 
 
 class DatabaseConnection:
@@ -39,8 +39,13 @@ class DatabaseConnection:
         return session()
 
     def create_data_model(self) -> None:
-        logger.info("Creating tables...")
-        Base.metadata.create_all(self.__engine)
+        try:
+            logger.info("Creating tables...")
+            Base.metadata.create_all(bind=self.__engine)
+        except Exception as error:
+            e = str(error)
+            logger.exception(f"Create tables error: {e}")
+            raise SQLAlchemyError(f"Create tables error: {e}")
 
     def get_session(self):
         session: Session = self.__session_factory()

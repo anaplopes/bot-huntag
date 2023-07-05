@@ -4,7 +4,7 @@ from sqlalchemy import delete, insert, select, update
 
 from src.database.connection import DatabaseConnection
 from src.model.filter import FilterModel
-from utils.logger import logger
+from src.utils.logger import logger
 
 
 class FilterRepository:
@@ -69,6 +69,8 @@ class FilterRepository:
             stmt = stmt.where(FilterModel.is_active == is_active)
         return self.db.scalars(stmt).first()
 
-    def select_all(self) -> List[FilterModel]:
+    def select_all(self, is_active: bool | None = None) -> List[FilterModel]:
         stmt = select(FilterModel)
+        if is_active:
+            stmt = stmt.where(FilterModel.is_active == is_active)
         return self.db.scalars(stmt).all()

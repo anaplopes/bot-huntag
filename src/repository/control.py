@@ -4,7 +4,7 @@ from sqlalchemy import insert, select, update
 
 from src.database.connection import DatabaseConnection
 from src.model.control import ControlModel
-from utils.logger import logger
+from src.utils.logger import logger
 
 
 class ControlRepository:
@@ -44,6 +44,10 @@ class ControlRepository:
         stmt = select(ControlModel).where(ControlModel.id == _id)
         if is_active:
             stmt = stmt.where(ControlModel.is_active == is_active)
+        return self.db.scalars(stmt).first()
+
+    def select_by_fileid(self, file_id: str) -> Optional[ControlModel]:
+        stmt = select(ControlModel).where(ControlModel.file_id == file_id)
         return self.db.scalars(stmt).first()
 
     def select_all(self) -> List[ControlModel]:

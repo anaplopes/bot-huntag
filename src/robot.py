@@ -14,8 +14,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from src.repository.control import ControlRepository
 from src.repository.filter import FilterRepository
-from src.utils.operating import OperatingSystem
 from src.utils.logger import logger
+from src.utils.operating import OperatingSystem
 
 
 class Robot:
@@ -167,9 +167,7 @@ class Robot:
                         self.opsys.copy_file(source=src, destiny=dir_target)
 
                         time.sleep(3)
-                        print(
-                            f"{datetime.now()} - Inserindo no controle de download ..."
-                        )
+                        logger.info("Inserindo no controle de download ...")
                         self.download_control(
                             category=category,
                             item_name=item_name,
@@ -182,27 +180,27 @@ class Robot:
                         break
 
             if not found_file:
+                logger.error("Arquivo não localizado no diretorio Downloads")
                 raise Exception(
                     "Arquivo não localizado no diretorio Downloads"
                 )
 
         except Exception as e:
+            logger.error("Moved File Error")
             raise Exception(f"Moved File Error: {str(e)}")
 
     def run(self):
         try:
-            print(f"{datetime.now()} - Configurando o driver ...")
+            logger.info("Configurando o driver ...")
             driver = self.config()
 
-            print(f"{datetime.now()} - Fazendo login ...")
+            logger.info("Fazendo login ...")
             self.login(driver=driver)
 
-            print(f"{datetime.now()} - Buscando programação ...")
-            rows = self.db.select_filter(
-                table="schedule", where='isActive = "true"'
-            )
+            logger.info("Buscando programação ...")
+            rows = self.repo_filter.select_all(is_active=True)
             if not rows:
-                print(f"{datetime.now()} - Nenhuma execução programada")
+                logger.info("Nenhuma execução programada")
 
             for row in rows:
                 ctg = [
@@ -212,7 +210,7 @@ class Robot:
                 ]
                 category = "/".join(ctg)
 
-                print(f"{datetime.now()} - Pesquisando {category} ...")
+                logger.info(f"Pesquisando {category} ...")
                 self.search(driver=driver, row=row)
 
                 time.sleep(5)
@@ -231,8 +229,8 @@ class Robot:
                 idx = 0
 
                 while qtd_records_page > 0:
-                    print(
-                        f"{datetime.now()} - Selecionar registro {idx + 1} de {len(records)} ..."
+                    logger.info(
+                        f"Selecionar registro {idx + 1} de {len(records)} ..."
                     )
                     records[idx].click()
 
@@ -251,8 +249,8 @@ class Robot:
 
                     for index, item in enumerate(download):
                         try:
-                            print(
-                                f"{datetime.now()} - Arquivo {index + 1} de {len(download)} ..."
+                            logger.info(
+                                f"Arquivo {index + 1} de {len(download)} ..."
                             )
 
                             name = titulo[index].text
@@ -269,26 +267,22 @@ class Robot:
                             file_href = item.get_attribute("href")
                             file_id = re.sub(r"\D", "", file_href)
 
-                            be_downloaded = self.db.select_filter(
-                                table="download_control",
-                                where=f'fileId == "{file_id}"',
+                            be_downloaded = self.repo_control.select_by_fileid(
+                                file_id=file_id
                             )
                             if be_downloaded:
-                                print(
-                                    f"{datetime.now()} - Arquivo ja baixado {name} ..."
-                                )
+                                logger.info(f"Arquivo ja baixado {name} ...")
                                 continue
 
-                            print(f"{datetime.now()} - Baixando {name} ...")
+                            logger.info(f"Baixando {name} ...")
                             item.click()
 
-                            print(
-                                f"{datetime.now()} - Aguardando carregamento do arquivo {file_name} ..."
+                            logger.info(
+                                f"Aguardando carregamento do arquivo {file_name} ..."
                             )
                             time.sleep(120)  # 2 minutos
-                            print(
-                                f"{datetime.now()} - Movendo arquivo {file_name} ..."
-                            )
+
+                            logger.info(f"Movendo arquivo {file_name} ...")
                             self.moved_file(
                                 item_name=item_name,
                                 file_id=file_id,
@@ -298,7 +292,7 @@ class Robot:
 
                         except Exception as e:
                             error = str(e).replace("?", "")
-                            print(error)
+                            logger.error(error)
                             self.download_control(
                                 category=category,
                                 item_name=item_name,
@@ -308,15 +302,13 @@ class Robot:
                             )
                             continue
 
-                    print(f"{datetime.now()} - Voltando a pagina ...")
+                    logger.info("Voltando a pagina ...")
                     driver.find_element(
                         By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]'
                     ).click()
 
                     if qtd_page > 1 and qtd_records_page == 1:
-                        print(
-                            f"{datetime.now()} - Indo para proxima pagina ..."
-                        )
+                        logger.info("Indo para proxima pagina ...")
                         next_page = driver.execute_script(
                             "return document.getElementsByClassName('fa fa-chevron-right')"
                         )
@@ -339,12 +331,8 @@ class Robot:
                         )
 
                 time.sleep(5)
-                print(f"{datetime.now()} - Voltando a Home Page ...")
-                self.db.update(
-                    table="schedule",
-                    col_val='isActive = "false"',
-                    where=f'id = {row["id"]}',
-                )
+                logger.info("Voltando a Home Page ...")
+                self.repo_filter.toggle_filter(_id=row["id"], action=False)
                 driver.find_element(
                     By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
                 ).click()
@@ -353,7 +341,7 @@ class Robot:
 
         except Exception as e:
             error = str(e)
-            print(error)
+            logger.error(error)
             return error
 
         finally:
