@@ -15,11 +15,16 @@ class Driver:
         options.add_argument("--disable-gpu")
         return options
 
-    def execute(self):
-        service = Service(ChromeDriverManager().install())
-        # service = Service('C:/chromedriver_win32/chromedriver.exe')
-        driver = webdriver.Chrome(service=service, options=self.config())
-        driver.set_window_size(1195, 666)
-        driver.implicitly_wait(20)
-        logger.info("Driver configured")
-        return driver
+    def create_driver(self):
+        try:
+            service = Service(ChromeDriverManager().install())
+            # service = Service('C:/chromedriver_win32/chromedriver.exe')
+            driver = webdriver.Chrome(service=service, options=self.config())
+            driver.set_window_size(1195, 666)
+            driver.implicitly_wait(20)
+            logger.info("Driver created.")
+            return driver
+
+        except Exception as e:
+            logger.error("Driver error.")
+            raise Exception(f"Driver error: {str(e)}")

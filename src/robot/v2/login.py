@@ -15,8 +15,8 @@ class Login:
             driver.find_element(
                 By.XPATH, '//input[@type="submit"][@value="Login"]'
             ).submit()
-            logger.info("Logged")
+            logger.info("Logged.")
 
         except Exception as e:
-            logger.error("Login Error")
-            raise Exception(f"Login Error: {str(e)}")
+            logger.error("Sing in error.")
+            raise Exception(f"Sing in error: {str(e)}")

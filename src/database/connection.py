@@ -7,7 +7,7 @@ from src.settings import settings
 from src.utils.logger import logger
 
 
-class DatabaseConnection:
+class ConnectionDatabase:
     def __init__(self) -> None:
         self.__engine = self.create_connect()
 
@@ -33,10 +33,10 @@ class DatabaseConnection:
             return conn
 
     def __session_factory(self) -> Session:
-        session = sessionmaker(
+        Session = sessionmaker(
             autocommit=False, autoflush=False, bind=self.__engine
         )
-        return session()
+        return Session()
 
     def create_data_model(self) -> None:
         try:
@@ -46,11 +46,13 @@ class DatabaseConnection:
             e = str(error)
             logger.exception(f"Create tables error: {e}")
             raise SQLAlchemyError(f"Create tables error: {e}")
+        finally:
+            self.__engine.dispose()
 
     def get_session(self):
-        session: Session = self.__session_factory()
         try:
-            yield session
+            session = self.__session_factory()
+            return session
         except Exception as error:
             e = str(error)
             logger.exception(f"Session rollback: {e}")

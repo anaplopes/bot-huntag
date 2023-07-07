@@ -11,10 +11,10 @@ class FilterModel(Base):
     __tablename__ = "filter"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    category = Column(String(50), nullable=False, unique=True)
-    subcategory1 = Column(String(100))
-    subcategory2 = Column(String(100))
-    subcategory3 = Column(String(100))
+    category = Column(String(50), nullable=False)
+    subcategory1 = Column(String(100), nullable=False)
+    subcategory2 = Column(String(100), nullable=False)
+    subcategory3 = Column(String(100), nullable=False)
     subcategory4 = Column(String(100))
     subcategory5 = Column(String(100))
     subcategory6 = Column(String(100))

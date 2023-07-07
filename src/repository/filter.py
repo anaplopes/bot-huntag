@@ -2,14 +2,14 @@ from typing import List, Optional
 
 from sqlalchemy import delete, insert, select, update
 
-from src.database.connection import DatabaseConnection
+from src.database.connection import ConnectionDatabase
 from src.model.filter import FilterModel
 from src.utils.logger import logger
 
 
 class FilterRepository:
     def __init__(self) -> None:
-        self.db = DatabaseConnection().get_session()
+        self.session = ConnectionDatabase().get_session()
 
     def delete_filter(self, _id: str) -> FilterModel:
         stmt = (
@@ -17,24 +17,24 @@ class FilterRepository:
             .where(FilterModel.c.id == _id)
             .returning(FilterModel)
         )
-        result = self.db.scalars(stmt)
-        self.db.commit()
-        logger.info("Dado removido com sucesso.")
+        result = self.session.scalars(stmt)
+        self.session.commit()
+        logger.info("Data removed successfully.")
         return result.first()
 
     def insert_filter(self, value: dict) -> FilterModel:
         stmt = insert(FilterModel).values(value).returning(FilterModel)
-        result = self.db.scalars(stmt)
-        self.db.commit()
-        logger.info("Dado inserido com sucesso.")
+        result = self.session.scalars(stmt)
+        self.session.commit()
+        logger.info("Data successfully saved.")
         return result.first()
 
     def add_filter(self, value: dict) -> FilterModel:
         model = FilterModel(**value)
-        self.db.add(model)
-        self.db.commit()
-        self.db.refresh(model)
-        logger.info("Dado salvo com sucesso.")
+        self.session.add(model)
+        self.session.commit()
+        self.session.refresh(model)
+        logger.info("Data successfully saved.")
         return model
 
     def update_filter(self, _id: str, value: dict) -> Optional[FilterModel]:
@@ -44,9 +44,9 @@ class FilterRepository:
             .values(value)
             .returning(FilterModel)
         )
-        result = self.db.scalars(stmt)
-        self.db.commit()
-        logger.info("Dado atualizado com sucesso.")
+        result = self.session.scalars(stmt)
+        self.session.commit()
+        logger.info("Data updated successfully.")
         return result.first()
 
     def toggle_filter(self, _id: str, action: bool) -> Optional[FilterModel]:
@@ -56,9 +56,9 @@ class FilterRepository:
             .values({FilterModel.is_active: action})
             .returning(FilterModel)
         )
-        result = self.db.scalars(stmt)
-        self.db.commit()
-        logger.info("Status atualizado com sucesso.")
+        result = self.session.scalars(stmt)
+        self.session.commit()
+        logger.info("Status updated successfully.")
         return result.first()
 
     def select_by_id(
@@ -67,10 +67,10 @@ class FilterRepository:
         stmt = select(FilterModel).where(FilterModel.id == _id)
         if is_active:
             stmt = stmt.where(FilterModel.is_active == is_active)
-        return self.db.scalars(stmt).first()
+        return self.session.scalars(stmt).first()
 
     def select_all(self, is_active: bool | None = None) -> List[FilterModel]:
         stmt = select(FilterModel)
         if is_active:
             stmt = stmt.where(FilterModel.is_active == is_active)
-        return self.db.scalars(stmt).all()
+        return self.session.scalars(stmt).all()

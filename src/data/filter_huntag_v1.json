@@ -1,8 +1,6 @@
 [
     {
         "categoria": "Merchandising",
-        "id": "1",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -11,8 +9,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "2",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -21,8 +17,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "3",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -31,8 +25,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "4",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -41,8 +33,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "5",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -51,8 +41,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "6",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -61,8 +49,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "7",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -71,8 +57,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "8",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -81,8 +65,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "9",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -91,8 +73,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "10",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -101,8 +81,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "11",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -111,8 +89,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "12",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -121,8 +97,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "13",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -131,8 +105,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "14",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -141,8 +113,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "15",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -151,8 +121,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "16",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Assinaturas",
@@ -161,8 +129,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "17",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Direcional",
@@ -171,8 +137,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "18",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Espaço Projeto",
@@ -181,8 +145,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "19",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Frente de Caixa/Atendimento",
@@ -191,8 +153,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "20",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Frente de Caixa/Atendimento",
@@ -201,8 +161,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "21",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Lateral de ponta",
@@ -211,8 +169,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "22",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -221,8 +177,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "23",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -231,8 +185,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "24",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -241,8 +193,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "25",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -251,8 +201,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "26",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -261,8 +209,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "27",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -271,8 +217,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "28",
-        "isActive": "true",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -281,8 +225,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "29",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -291,8 +233,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "30",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -301,8 +241,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "31",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -311,8 +249,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "32",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -321,8 +257,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "33",
-        "isActive": "true",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -331,8 +265,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "34",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -341,8 +273,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "35",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -351,8 +281,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "36",
-        "isActive": "true",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -361,8 +289,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "37",
-        "isActive": "true",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -371,8 +297,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "38",
-        "isActive": "true",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -381,8 +305,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "39",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Micro Merchan",
@@ -391,8 +313,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "40",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Pódios",
@@ -401,8 +321,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "41",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Sala de Cursos",
@@ -411,8 +329,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "42",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Serviços Institucionais",
@@ -421,8 +337,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "43",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Serviços Institucionais",
@@ -431,8 +345,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "44",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Serviços Institucionais",
@@ -441,8 +353,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "45",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Serviços Institucionais",
@@ -451,8 +361,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "46",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Área de Vendas/Seções",
         "subcategoria3": "Serviços Institucionais",
@@ -461,8 +369,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "47",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Drive",
         "subcategoria3": "",
@@ -471,8 +377,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "48",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Entrada da Loja",
         "subcategoria3": "Mapa da Loja",
@@ -481,8 +385,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "49",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Entrada da Loja",
         "subcategoria3": "SAS de Entrada",
@@ -491,8 +393,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "50",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Estacionamento",
         "subcategoria3": "Direcional",
@@ -501,8 +401,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "51",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Estacionamento",
         "subcategoria3": "Tendas",
@@ -511,8 +409,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "52",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Fachada",
         "subcategoria3": "",
@@ -521,8 +417,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "53",
-        "isActive": "false",
         "subcategoria1": "Comunicação Visual",
         "subcategoria2": "Retirada de mercadoria",
         "subcategoria3": "",
@@ -531,8 +425,6 @@
     },
     {
         "categoria": "Merchandising",
-        "id": "54",
-        "isActive": "false",
         "subcategoria1": "OBMs",
         "subcategoria2": "",
         "subcategoria3": "",

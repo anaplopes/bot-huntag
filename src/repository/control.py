@@ -2,20 +2,20 @@ from typing import List, Optional
 
 from sqlalchemy import insert, select, update
 
-from src.database.connection import DatabaseConnection
+from src.database.connection import ConnectionDatabase
 from src.model.control import ControlModel
 from src.utils.logger import logger
 
 
 class ControlRepository:
     def __init__(self) -> None:
-        self.db = DatabaseConnection().get_session()
+        self.db = ConnectionDatabase().get_session()
 
     def insert_control(self, value: dict) -> ControlModel:
         stmt = insert(ControlModel).values(value).returning(ControlModel)
         result = self.db.scalars(stmt)
         self.db.commit()
-        logger.info("Dado inserido com sucesso.")
+        logger.info("Data successfully saved.")
         return result.first()
 
     def add_control(self, value: dict) -> ControlModel:
@@ -23,7 +23,7 @@ class ControlRepository:
         self.db.add(model)
         self.db.commit()
         self.db.refresh(model)
-        logger.info("Dado salvo com sucesso.")
+        logger.info("Data successfully saved.")
         return model
 
     def update_control(self, _id: str, value: dict) -> Optional[ControlModel]:
@@ -35,7 +35,7 @@ class ControlRepository:
         )
         result = self.db.scalars(stmt)
         self.db.commit()
-        logger.info("Dado atualizado com sucesso.")
+        logger.info("Data updated successfully.")
         return result.first()
 
     def select_by_id(
@@ -52,4 +52,4 @@ class ControlRepository:
 
     def select_all(self) -> List[ControlModel]:
         stmt = select(ControlModel)
-        return self.db.scalars(stmt).all()
+        return self.session.scalars(stmt).all()

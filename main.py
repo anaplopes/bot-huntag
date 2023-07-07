@@ -1,7 +1,8 @@
-from src.database.connection import DatabaseConnection
+from src.database.connection import ConnectionDatabase
 from src.robot.v2.robot import Robot
 from logging.config import dictConfig
 from src.utils.logger import Logger
+from src.data import migrate
 
 
 if __name__ == "__main__":
@@ -10,9 +11,10 @@ if __name__ == "__main__":
     dictConfig(Logger().dict())
 
     # create tables
-    db = DatabaseConnection()
-    db.create_data_model()
+    ConnectionDatabase().create_data_model()
+
+    # migrate
+    migrate.data_filter()
 
     # run bot
-    bot = Robot()
-    bot.execute()
+    bot = Robot().execute()
