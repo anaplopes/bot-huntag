@@ -3,7 +3,7 @@ from typing import List, Optional
 from sqlalchemy import delete, insert, select, update
 
 from src.database.connection import ConnectionDatabase
-from src.model.filter import FilterModel
+from src.models.filter import FilterModel
 from src.utils.logger import logger
 
 

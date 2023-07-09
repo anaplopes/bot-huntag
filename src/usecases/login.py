@@ -1,10 +1,11 @@
 import os
+
 from selenium.webdriver.common.by import By
+
 from src.utils.logger import logger
 
 
 class Login:
-
     def sign_in(self, driver):
         try:
             driver.get(os.getenv("HUNTAG_URL"))

@@ -6,7 +6,6 @@ from src.utils.logger import logger
 
 
 class Driver:
-
     def config(self):
         options = webdriver.ChromeOptions()
         options.add_argument("--disable-logging")

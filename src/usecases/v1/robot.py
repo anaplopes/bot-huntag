@@ -6,14 +6,13 @@ import unicodedata
 from datetime import datetime
 from math import ceil
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from webdriver_manager.chrome import ChromeDriverManager
 
 from src.repository.control import ControlRepository
 from src.repository.filter import FilterRepository
+from src.usecases.driver import Driver
+from src.usecases.filter import Filter
+from src.usecases.login import Login
 from src.utils.logger import logger
 from src.utils.operating import OperatingSystem
 
@@ -23,105 +22,6 @@ class Robot:
         self.repo_control = ControlRepository()
         self.repo_filter = FilterRepository()
         self.opsys = OperatingSystem()
-
-    def config(self):
-        # inicia e configura driver
-        options = webdriver.ChromeOptions()
-        options.add_argument("--disable-logging")
-        options.add_argument("--disable-infobars")
-        options.add_argument("--disable-extensions")
-        options.add_argument("--disable-gpu")
-        service = Service(ChromeDriverManager().install())
-        # service = Service('C:/chromedriver_win32/chromedriver.exe')
-        driver = webdriver.Chrome(service=service, options=options)
-        driver.set_window_size(1195, 666)
-        driver.implicitly_wait(20)
-        logger.info("Driver configured")
-        return driver
-
-    def login(self, driver):
-        try:
-            driver.get(os.getenv("HUNTAG_URL"))
-            driver.find_element(By.ID, "Email").send_keys(os.getenv("EMAIL"))
-            driver.find_element(By.ID, "Password").send_keys(
-                os.getenv("PASSWORD")
-            )
-            driver.find_element(
-                By.XPATH, '//input[@type="submit"][@value="Login"]'
-            ).submit()
-            logger.info("Logged")
-
-        except Exception as e:
-            logger.error("Login Error")
-            raise Exception(f"Login Error: {str(e)}")
-
-    def search(self, driver, row):
-        try:
-            # selecionar categoria
-            categoria = Select(driver.find_element(By.ID, "categoriesSelect"))
-            categoria.select_by_visible_text(row.category)
-
-            # selecionar subcategoria
-            time.sleep(3)
-            subcategorias = driver.find_elements(
-                By.XPATH,
-                '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-            )
-            subcategoria_1 = Select(subcategorias[0])
-            subcategoria_1.select_by_visible_text(row.subcategory1)
-
-            time.sleep(3)
-            subcategorias = driver.find_elements(
-                By.XPATH,
-                '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-            )
-            subcategoria_2 = Select(subcategorias[1])
-            subcategoria_2.select_by_visible_text(row.subcategory2)
-
-            if row.subcategory3:
-                time.sleep(3)
-                subcategorias = driver.find_elements(
-                    By.XPATH,
-                    '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-                )
-                subcategoria_3 = Select(subcategorias[2])
-                subcategoria_3.select_by_visible_text(row.subcategory3)
-
-            if row.subcategory4:
-                time.sleep(3)
-                subcategorias = driver.find_elements(
-                    By.XPATH,
-                    '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-                )
-                subcategoria_4 = Select(subcategorias[3])
-                subcategoria_4.select_by_visible_text(row.subcategory4)
-
-            if row.subcategory5:
-                time.sleep(3)
-                subcategorias = driver.find_elements(
-                    By.XPATH,
-                    '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-                )
-                subcategoria_5 = Select(subcategorias[4])
-                subcategoria_5.select_by_visible_text(row.subcategory5)
-
-            if row.subcategory6:
-                time.sleep(3)
-                subcategorias = driver.find_elements(
-                    By.XPATH,
-                    '//div[@id="subCategoriesDiv"]/select[@class="form-control"]',
-                )
-                subcategoria_6 = Select(subcategorias[5])
-                subcategoria_6.select_by_visible_text(row.subcategory6)
-
-            # pesquisar
-            time.sleep(3)
-            driver.find_element(By.ID, "SearchButton").click()
-            logger.info("Search")
-
-        except Exception as e:
-            logger.error("Search Error")
-            raise Exception(f"Search Error: {str(e)}")
 
     def download_control(
         self,
@@ -191,16 +91,16 @@ class Robot:
 
     def run(self):
         try:
-            logger.info("Configurando o driver ...")
-            driver = self.config()
+            logger.info("Configuring and creating drivers ...")
+            driver = Driver().create_driver()
 
-            logger.info("Fazendo login ...")
-            self.login(driver=driver)
+            logger.info("Logging in ...")
+            Login().sign_in(driver=driver)
 
-            logger.info("Buscando programação ...")
+            logger.info("Looking for programming ...")
             rows = self.repo_filter.select_all(is_active=True)
             if not rows:
-                logger.info("Nenhuma execução programada")
+                logger.info("No scheduled execution.")
 
             for row in rows:
                 ctg = [
@@ -210,8 +110,8 @@ class Robot:
                 ]
                 category = "/".join(ctg)
 
-                logger.info(f"Pesquisando {category} ...")
-                self.search(driver=driver, row=row)
+                logger.info("Searching ...")
+                Filter().search(driver=driver, row=row)
 
                 time.sleep(5)
                 records = driver.execute_script(
@@ -238,7 +138,7 @@ class Robot:
                     item_name = driver.execute_script(
                         "return document.querySelector('.item h3').textContent"
                     ).strip()
-                    print(f"{datetime.now()} - Item {item_name} ...")
+                    logger.info(f"{datetime.now()} - Item {item_name} ...")
 
                     download = driver.execute_script(
                         "return document.querySelectorAll('.item-download a')"
@@ -337,7 +237,7 @@ class Robot:
                     By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
                 ).click()
 
-            print("Finalizado")
+            logger.info("Finalizado")
 
         except Exception as e:
             error = str(e)

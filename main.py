@@ -1,12 +1,11 @@
-from src.database.connection import ConnectionDatabase
-from src.robot.v2.robot import Robot
 from logging.config import dictConfig
-from src.utils.logger import Logger
-from src.data import migrate
 
+from migration import migrate
+from src.database.connection import ConnectionDatabase
+from src.usecases.v2.robot import Robot
+from src.utils.logger import Logger
 
 if __name__ == "__main__":
-
     # config log
     dictConfig(Logger().dict())
 

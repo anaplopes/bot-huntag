@@ -2,7 +2,7 @@ from sqlalchemy import Engine, create_engine
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session, sessionmaker
 
-from src.model.base import Base
+from src.models.base import Base
 from src.settings import settings
 from src.utils.logger import logger
 
@@ -29,14 +29,8 @@ class ConnectionDatabase:
             logger.exception(f"Engine connection error: {e}")
             raise SQLAlchemyError(f"Engine connection error: {e}")
         else:
-            logger.info("Connected to database.")
+            logger.info("Connected.")
             return conn
-
-    def __session_factory(self) -> Session:
-        Session = sessionmaker(
-            autocommit=False, autoflush=False, bind=self.__engine
-        )
-        return Session()
 
     def create_data_model(self) -> None:
         try:
@@ -47,7 +41,15 @@ class ConnectionDatabase:
             logger.exception(f"Create tables error: {e}")
             raise SQLAlchemyError(f"Create tables error: {e}")
         finally:
+            logger.info("Disconnecting from database...")
             self.__engine.dispose()
+
+    def __session_factory(self) -> Session:
+        logger.info("Creating session in the database...")
+        Session = sessionmaker(
+            autocommit=False, autoflush=False, bind=self.__engine
+        )
+        return Session()
 
     def get_session(self):
         try:
@@ -59,5 +61,7 @@ class ConnectionDatabase:
             session.rollback()
             raise SQLAlchemyError(f"Session rollback: {e}")
         finally:
+            logger.info("Closing database session...")
             session.close()
+            logger.info("Disconnecting from database...")
             self.__engine.dispose()

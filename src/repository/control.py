@@ -3,7 +3,7 @@ from typing import List, Optional
 from sqlalchemy import insert, select, update
 
 from src.database.connection import ConnectionDatabase
-from src.model.control import ControlModel
+from src.models.control import ControlModel
 from src.utils.logger import logger
 
 

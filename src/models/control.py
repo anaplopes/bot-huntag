@@ -4,7 +4,7 @@ from sqlalchemy import Column, DateTime, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
 
-from src.model.base import Base
+from src.models.base import Base
 
 
 class ControlModel(Base):
