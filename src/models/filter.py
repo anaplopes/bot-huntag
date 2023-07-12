@@ -8,7 +8,7 @@ from src.models.base import Base
 
 
 class FilterModel(Base):
-    __tablename__ = "filter"
+    __tablename__ = "filters"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     category = Column(String(50), nullable=False)

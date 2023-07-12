@@ -3,6 +3,7 @@ import time
 
 from src.repository.control import ControlRepository
 from src.repository.filter import FilterRepository
+from src.repository.kit import KitRepository
 from src.usecases.driver import Driver
 from src.usecases.filter import Filter
 from src.usecases.login import Login
@@ -16,6 +17,7 @@ class Robot:
     def __init__(self):
         self.repo_control = ControlRepository()
         self.repo_filter = FilterRepository()
+        self.repo_kit = KitRepository()
         self.operation = OperatingSystem()
 
     def list_records(self, driver):
@@ -32,24 +34,36 @@ class Robot:
 
     def kit_info(self, driver):
         # pega o id do arquivo
-        record_id = driver.execute_script(
+        kit_id = driver.execute_script(
             "return document.querySelector('small.id').textContent"
         )
 
         # pega o nome do arquivo
-        record_name = driver.execute_script(
+        kit_name = driver.execute_script(
             "return document.querySelector('.item h3').textContent"
         ).strip()
 
+        # pega o filtro
+        filter_to_kit = driver.execute_script(
+            "return document.querySelectorAll('.item .m-t-none.m-b-xs.text-muted.font-bold')[0].textContent"
+        )
+
         # pega a data de criação
-        created_at = driver.execute_script(
+        kit_creation_date = driver.execute_script(
             "return document.querySelectorAll('.item .m-t-none.m-b-xs.text-muted.font-bold')[1].textContent"
         )
 
+        # pega a descrição do produto
+        product_description = driver.execute_script(
+            "return document.querySelector('.item p').textContent"
+        )
+
         return {
-            "record_id": int(re.findall(r"\d+", record_id)[0]),
-            "record_name": record_name,
-            "created_at": re.findall(r"(\d+/\d+/\d+)", created_at)[0]
+            "kit_id": int(re.findall(r"\d+", kit_id)[0]),
+            "kit_name": kit_name,
+            "filter_to_kit": filter_to_kit,
+            "kit_creation_date": re.findall(r"(\d+/\d+/\d+)", kit_creation_date)[0],
+            "product_description": product_description
         }
 
     def execute(self):
@@ -81,14 +95,28 @@ class Robot:
                     records[idx].click()
 
                     time.sleep(3)
-                    self.kit_info(driver=driver)
+                    info = self.kit_info(driver=driver)
+                    self.repo_kit.add_control(value=info)
 
-                    # TODO: identificar PNG
-
-                    # faz o download do arquivo
-                    download = driver.execute_script(
-                        "return document.querySelectorAll('.item-download a')"
+                    list_title_file = driver.execute_script(
+                        "return document.querySelectorAll('panel-footer title ellipsis').textContent"
                     )
+                    list_button_download = driver.execute_script(
+                        "return document.querySelectorAll('.panel-footer .item-download a')"
+                    )
+                    list_img_file = driver.execute_script(
+                        "return document.querySelectorAll('.panel-body .item img')"
+                    )
+                    for image in zip(list_img_file, list_title_file, list_button_download):
+                        cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
+                        pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
+                        src = image.get_attribute('src')
+                        if src != cdr or src != pdf:
+
+
+
+
+                    
 
         except Exception as e:
             error = str(e)

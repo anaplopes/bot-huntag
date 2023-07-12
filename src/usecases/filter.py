@@ -9,8 +9,9 @@ from src.utils.logger import logger
 class Filter:
     def category(self, driver, category_name):
         try:
-            element = Select(driver.find_element(By.ID, "categoriesSelect"))
-            element.select_by_visible_text(category_name)
+            element = driver.find_element(By.ID, "ddl-item-category")
+            select_element = Select(element)
+            select_element.select_by_visible_text(category_name)
             logger.info(f"Filtered category {category_name}.")
 
         except Exception as e:
