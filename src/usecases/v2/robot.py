@@ -96,27 +96,38 @@ class Robot:
 
                     time.sleep(3)
                     info = self.kit_info(driver=driver)
-                    self.repo_kit.add_control(value=info)
+                    kit = self.repo_kit.select_by_kit_id(kit_id=info["kit_id"])
+                    if not kit:
+                        self.repo_kit.add_kit(value=info)
 
                     list_title_file = driver.execute_script(
-                        "return document.querySelectorAll('panel-footer title ellipsis').textContent"
+                        "return document.getElementsByClassName('panel-footer title ellipsis')"
                     )
                     list_button_download = driver.execute_script(
-                        "return document.querySelectorAll('.panel-footer .item-download a')"
+                        "return document.querySelectorAll('#viewGridContainer .panel-footer .item-download a')"
                     )
                     list_img_file = driver.execute_script(
-                        "return document.querySelectorAll('.panel-body .item img')"
+                        "return document.querySelectorAll('#viewGridContainer .panel-body .item img')"
                     )
-                    for image in zip(list_img_file, list_title_file, list_button_download):
+                    for image, title, button in zip(list_img_file, list_title_file, list_button_download):
                         cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
                         pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
                         src = image.get_attribute('src')
-                        if src != cdr or src != pdf:
-
-
-
-
-                    
+                        if src != cdr and src != pdf:
+                            try:
+                                button.click()
+                            except Exception:
+                                self.repo_control.add_control(value={
+                                    "kit_id": info["kit_id"],
+                                    "file_name": title,
+                                    "status": "error"
+                                })
+                            else:
+                                self.repo_control.add_control(value={
+                                    "kit_id": info["kit_id"],
+                                    "file_name": title,
+                                    "status": "success"
+                                })
 
         except Exception as e:
             error = str(e)

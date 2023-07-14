@@ -46,10 +46,6 @@ class ControlRepository:
             stmt = stmt.where(ControlModel.is_active == is_active)
         return self.db.scalars(stmt).first()
 
-    def select_by_fileid(self, file_id: str) -> Optional[ControlModel]:
-        stmt = select(ControlModel).where(ControlModel.file_id == file_id)
-        return self.db.scalars(stmt).first()
-
     def select_all(self) -> List[ControlModel]:
         stmt = select(ControlModel)
         return self.session.scalars(stmt).all()
