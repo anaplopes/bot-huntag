@@ -10,11 +10,13 @@ packages = [{include = "bot_huntag"}]
 python = "^3.10"
 selenium = "^4.10.0"
 webdriver-manager = "^3.8.6"
-msgraph-sdk = "^1.0.0a13"
 pydantic = "^1.10"
 sqlalchemy = "^2.0.17"
 python-dotenv = "^1.0.0"
 psycopg2-binary = "^2.9.6"
+azure-identity = "^1.13.0"
+msgraph-sdk = "^1.0.0a13"
+msal = "^1.23.0"
 
 
 [tool.poetry.group.dev.dependencies]

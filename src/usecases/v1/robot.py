@@ -15,6 +15,7 @@ from src.usecases.filter import Filter
 from src.usecases.login import Login
 from src.utils.logger import logger
 from src.utils.operating import OperatingSystem
+from src.settings import settings
 
 
 class Robot:
@@ -51,9 +52,9 @@ class Robot:
         self, item_name: str, file_id: str, file_name: str, category: str
     ):
         try:
-            dir_download = os.getenv("PATH_DIR_DOWNLOAD")
+            dir_download = settings.PATH_DIR_DOWNLOAD
             dir_target = (
-                f'{os.getenv("PATH_DIR_TARGET")}/{category}/{item_name}'
+                f'{settings.PATH_DIR_TARGET}/{category}/{item_name}'
             )
 
             self.opsys.create_dirs(dirname=dir_target)

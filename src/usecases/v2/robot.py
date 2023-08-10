@@ -66,8 +66,38 @@ class Robot:
             "product_description": product_description
         }
 
+    def list_title_file(self, driver):
+        return driver.execute_script(
+            "return document.getElementsByClassName('panel-footer title ellipsis')"
+        )
+
+    def list_button_download(self, driver):
+        return driver.execute_script(
+            "return document.querySelectorAll('#viewGridContainer .panel-footer .item-download a')"
+        )
+
+    def list_img_file(self, driver):
+        return driver.execute_script(
+            "return document.querySelectorAll('#viewGridContainer .panel-body .item img')"
+        )
+
+    def download_file(self, button, kit_id, title):
+        value = {
+            "kit_id": kit_id,
+            "file_name": title.text,
+            "status": "success"
+        }
+        try:
+            button.click()
+        except Exception:
+            value.update({"status": "error"})
+            self.repo_control.add_control(value=value)
+        else:
+            self.repo_control.add_control(value=value)
+
     def execute(self):
         try:
+
             logger.info("Configuring and creating drivers ...")
             driver = Driver().create_driver()
 
@@ -95,39 +125,20 @@ class Robot:
                     records[idx].click()
 
                     time.sleep(3)
-                    info = self.kit_info(driver=driver)
-                    kit = self.repo_kit.select_by_kit_id(kit_id=info["kit_id"])
+                    kit_info = self.kit_info(driver=driver)
+                    kit = self.repo_kit.select_by_kit_id(kit_id=kit_info["kit_id"])
                     if not kit:
-                        self.repo_kit.add_kit(value=info)
+                        self.repo_kit.add_kit(value=kit_info)
 
-                    list_title_file = driver.execute_script(
-                        "return document.getElementsByClassName('panel-footer title ellipsis')"
-                    )
-                    list_button_download = driver.execute_script(
-                        "return document.querySelectorAll('#viewGridContainer .panel-footer .item-download a')"
-                    )
-                    list_img_file = driver.execute_script(
-                        "return document.querySelectorAll('#viewGridContainer .panel-body .item img')"
-                    )
-                    for image, title, button in zip(list_img_file, list_title_file, list_button_download):
+                    list_img = self.list_img_file(driver=driver)
+                    list_title = self.list_title_file(driver=driver)
+                    list_button = self.list_button_download(driver=driver)
+                    for image, title, button in zip(list_img, list_title, list_button):
                         cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
                         pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
                         src = image.get_attribute('src')
                         if src != cdr and src != pdf:
-                            try:
-                                button.click()
-                            except Exception:
-                                self.repo_control.add_control(value={
-                                    "kit_id": info["kit_id"],
-                                    "file_name": title,
-                                    "status": "error"
-                                })
-                            else:
-                                self.repo_control.add_control(value={
-                                    "kit_id": info["kit_id"],
-                                    "file_name": title,
-                                    "status": "success"
-                                })
+                            self.download_file(button=button, kit_id=kit_info["kit_id"], title=title)
 
         except Exception as e:
             error = str(e)
