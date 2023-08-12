@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     HUNTAG_EMAIL: str = os.getenv("HUNTAG_EMAIL")
     HUNTAG_PASSWORD: str = os.getenv("HUNTAG_PASSWORD")
 
-    PATH_DIR_DOWNLOAD: str = os.getenv("PATH_DIR_DOWNLOAD")
+    PATH_DIR_SOURCE: str = os.getenv("PATH_DIR_SOURCE")
     PATH_DIR_TARGET: str = os.getenv("PATH_DIR_TARGET")
 
     DATABASE_ENGINE: str = "postgresql+psycopg2"

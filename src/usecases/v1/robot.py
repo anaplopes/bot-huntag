@@ -52,7 +52,7 @@ class Robot:
         self, item_name: str, file_id: str, file_name: str, category: str
     ):
         try:
-            dir_download = settings.PATH_DIR_DOWNLOAD
+            dir_download = settings.PATH_DIR_SOURCE
             dir_target = (
                 f'{settings.PATH_DIR_TARGET}/{category}/{item_name}'
             )
