@@ -10,12 +10,12 @@ from selenium.webdriver.common.by import By
 
 from src.repository.control import ControlRepository
 from src.repository.filter import FilterRepository
+from src.settings import settings
 from src.usecases.driver import Driver
 from src.usecases.filter import Filter
 from src.usecases.login import Login
 from src.utils.logger import logger
 from src.utils.operating import OperatingSystem
-from src.settings import settings
 
 
 class Robot:
@@ -53,9 +53,7 @@ class Robot:
     ):
         try:
             dir_download = settings.PATH_DIR_SOURCE
-            dir_target = (
-                f'{settings.PATH_DIR_TARGET}/{category}/{item_name}'
-            )
+            dir_target = f"{settings.PATH_DIR_TARGET}/{category}/{item_name}"
 
             self.opsys.create_dirs(dirname=dir_target)
 

@@ -45,7 +45,8 @@ class OperatingSystem:
     def move_file(self, source: str, destiny: str) -> bool:
         _source = self.exists(path=source)
         if _source:
-            os.rename(src=source, dst=destiny)
+            # os.rename(src=source, dst=destiny)
+            shutil.move(src=source, dst=destiny)
             return True
         return False
 

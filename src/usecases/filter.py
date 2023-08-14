@@ -3,11 +3,13 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+from src.models.filter import FilterModel
+
 from src.utils.logger import logger
 
 
 class Filter:
-    def category(self, driver, category_name):
+    def category(self, driver, category_name: str) -> None:
         try:
             element = driver.find_element(By.ID, "ddl-item-category")
             select_element = Select(element)
@@ -18,7 +20,7 @@ class Filter:
             logger.error(f"Filtered category error {category_name}")
             raise Exception(f"Filtered category error: {str(e)}")
 
-    def subcategory(self, driver, index, subcategory_name):
+    def subcategory(self, driver, index: int, subcategory_name: str) -> None:
         try:
             if subcategory_name:
                 time.sleep(3)
@@ -34,7 +36,7 @@ class Filter:
             logger.error(f"Filtered subcategory error {subcategory_name}")
             raise Exception(f"Filtered subcategory error: {str(e)}")
 
-    def search(self, driver, row):
+    def search(self, driver, row: FilterModel) -> None:
         try:
             self.category(driver=driver, category_name=row.category)
             self.subcategory(
@@ -56,10 +58,9 @@ class Filter:
                 driver=driver, index=5, subcategory_name=row.subcategory6
             )
 
-            # pesquisar
             time.sleep(3)
             driver.find_element(By.ID, "SearchButton").click()
-            logger.info("Search")
+            logger.info("Searched successfully")
 
         except Exception as e:
             logger.error("Search Error")
