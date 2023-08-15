@@ -18,6 +18,7 @@ class FilterModel(Base):
     subcategory4 = Column(String(100))
     subcategory5 = Column(String(100))
     subcategory6 = Column(String(100))
+    kit_name = Column(Boolean, default=False)
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())

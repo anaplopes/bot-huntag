@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 
 from src.utils.logger import logger
 
@@ -16,8 +15,7 @@ class Driver:
 
     def create_driver(self):
         try:
-            service = Service(ChromeDriverManager().install())
-            # service = Service('C:/chromedriver_win32/chromedriver.exe')
+            service = Service()
             driver = webdriver.Chrome(service=service, options=self.config())
             driver.set_window_size(1195, 666)
             driver.implicitly_wait(20)
@@ -25,5 +23,6 @@ class Driver:
             return driver
 
         except Exception as e:
-            logger.error("Driver error.")
-            raise Exception(f"Driver error: {str(e)}")
+            msg = f"Driver error: {str(e)}"
+            logger.error(msg)
+            raise Exception(msg)

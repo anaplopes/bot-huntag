@@ -8,13 +8,13 @@ from selenium.webdriver.common.by import By
 from src.repository.control import ControlRepository
 from src.repository.filter import FilterRepository
 from src.repository.kit import KitRepository
+from src.settings import settings
 from src.usecases.driver import Driver
 from src.usecases.filter import Filter
 from src.usecases.kit import Kit
 from src.usecases.login import Login
 from src.utils.logger import logger
 from src.utils.operating import OperatingSystem
-from src.settings import settings
 
 
 class Robot:
@@ -36,20 +36,19 @@ class Robot:
         )
         return int(re.findall(r"\d+", text_total_records)[0])
 
-    def list_title_file(self, driver):
-        return driver.execute_script(
+    def list_files(self, driver):
+        list_img_file = driver.execute_script(
+            "return document.querySelectorAll('#viewGridContainer .panel-body .item img')"
+        )
+
+        list_title_file = driver.execute_script(
             "return document.getElementsByClassName('panel-footer title ellipsis')"
         )
 
-    def list_button_download(self, driver):
-        return driver.execute_script(
+        list_button_download = driver.execute_script(
             "return document.querySelectorAll('#viewGridContainer .panel-footer .item-download a')"
         )
-
-    def list_img_file(self, driver):
-        return driver.execute_script(
-            "return document.querySelectorAll('#viewGridContainer .panel-body .item img')"
-        )
+        return list_img_file, list_title_file, list_button_download
 
     def download_file(self, button, kit_id: str, title: str):
         value = {
@@ -71,7 +70,7 @@ class Robot:
             self.repo_control.add_control(value=value)
             return True
 
-    def move_file(self, kit_id: str, title: str):
+    def move_file(self, kit_id: str, title: str, dir_path: str, kit_name: bool):
         value = {
             "kit_id": kit_id,
             "file_name": title,
@@ -81,13 +80,23 @@ class Robot:
         }
         try:
             dir_source = settings.PATH_DIR_SOURCE
-            dir_target = os.path.join(settings.PATH_DIR_TARGET, category, item_name)
+            dir_target = os.path.join(
+                settings.PATH_DIR_TARGET, dir_path, title
+            )
+            if kit_name:
+                dir_target = os.path.join(
+                    settings.PATH_DIR_TARGET, dir_path, kit_name, title
+                )
+
             self.operation.create_dirs(dirname=dir_target)
             self.operation.move_file(src=dir_source, dst=dir_target)
 
         except Exception as e:
             value.update(
-                {"status": "error", "detail": f"Failed to move the file: {str(e)}"}
+                {
+                    "status": "error",
+                    "detail": f"Failed to move the file: {str(e)}",
+                }
             )
             self.repo_control.add_control(value=value)
         else:
@@ -98,9 +107,20 @@ class Robot:
             By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]'
         ).click()
 
+    def next_page(self, driver):
+        button = driver.execute_script(
+            "return document.getElementsByClassName('fa fa-chevron-right')"
+        )
+        button[0].click()
+
+    def home_page(self, driver):
+        driver.find_element(
+            By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
+        ).click()
+
     def execute(self):
         try:
-            logger.info("Configuring and creating drivers ...")
+            logger.info("Configuring and creating driver ...")
             driver = Driver().create_driver()
 
             logger.info("Logging in ...")
@@ -117,7 +137,9 @@ class Robot:
 
                 records = self.list_records(driver=driver)
                 amount_records = len(records)
-                total_pages = ceil(self.total_records_found(driver=driver) / 30)
+                total_pages = ceil(
+                    self.total_records_found(driver=driver) / 30
+                )
                 idx = 0
 
                 while amount_records > 0:
@@ -134,9 +156,10 @@ class Robot:
                     if not get_kit:
                         self.repo_kit.add_kit(value=kit_info)
 
-                    list_img = self.list_img_file(driver=driver)
-                    list_title = self.list_title_file(driver=driver)
-                    list_button = self.list_button_download(driver=driver)
+                    list_img, list_title, list_button = self.list_files(
+                        driver=driver
+                    )
+
                     for image, title, button in zip(
                         list_img, list_title, list_button
                     ):
@@ -155,13 +178,34 @@ class Robot:
                                 logger.info(f"Moving file {title_text} ...")
                                 self.move_file(
                                     kit_id=kit_info["kit_id"],
-                                    title=title_text)
+                                    title=title_text,
+                                    dir_path=os.path.join(
+                                        row.subcategory4, row.subcategory5, row.subcategory6
+                                    ),
+                                    kit_name=kit_info["kit_name"] if row.kit_name else None,
+                                )
 
-                    logger.info("Returning to the page ...")
+                    logger.info("Returning to list of records page ...")
                     self.returning_page(driver=driver)
-                    amount_records -= 1
 
-            logger.info("Finalizado")
+                    if total_pages > 1 and amount_records == 1:
+                        logger.info("Going to next page ...")
+                        self.next_page(driver=driver)
+                        records = self.list_records(driver=driver)
+                        amount_records = len(records)
+                        total_pages -= 1
+                        idx = 0
+                    else:
+                        records = self.list_records(driver=driver)
+                        amount_records -= 1
+                        idx += 1
+
+                time.sleep(5)
+                logger.info("Returning to Home Page ...")
+                self.repo_filter.toggle_filter(_id=row["id"], action=False)
+                self.home_page(driver=driver)
+
+            logger.info("Finished")
 
         except Exception as e:
             error = str(e)

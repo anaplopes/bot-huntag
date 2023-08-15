@@ -20,5 +20,6 @@ class Login:
             logger.info("Logged.")
 
         except Exception as e:
-            logger.error("Sing in error.")
-            raise Exception(f"Sing in error: {str(e)}")
+            msg = f"Sing in error: {str(e)}"
+            logger.error(msg)
+            raise Exception(msg)

@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
 from src.models.filter import FilterModel
-
 from src.utils.logger import logger
 
 
@@ -63,5 +62,6 @@ class Filter:
             logger.info("Searched successfully")
 
         except Exception as e:
-            logger.error("Search Error")
-            raise Exception(f"Search Error: {str(e)}")
+            msg = f"Search Error: {str(e)}"
+            logger.error(msg)
+            raise Exception(msg)
