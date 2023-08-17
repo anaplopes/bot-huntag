@@ -15,6 +15,7 @@ from src.usecases.kit import Kit
 from src.usecases.login import Login
 from src.utils.logger import logger
 from src.utils.operating import OperatingSystem
+from src.models.filter import FilterModel
 
 
 class Robot:
@@ -50,7 +51,7 @@ class Robot:
         )
         return list_img_file, list_title_file, list_button_download
 
-    def download_file(self, button, kit_id: str, title: str):
+    def download_file(self, button, kit_id: str, title: str) -> None:
         value = {
             "kit_id": kit_id,
             "file_name": title,
@@ -70,7 +71,7 @@ class Robot:
             self.repo_control.add_control(value=value)
             return True
 
-    def move_file(self, kit_id: str, title: str, dir_path: str, kit_name: bool):
+    def move_file(self, kit_id: str, title: str, filename: str, dir_path: str, kit_name: bool) -> None:
         value = {
             "kit_id": kit_id,
             "file_name": title,
@@ -79,17 +80,17 @@ class Robot:
             "detail": "File moved successfully",
         }
         try:
-            dir_source = settings.PATH_DIR_SOURCE
+            dir_source = os.path.join(settings.PATH_DIR_SOURCE, filename)
             dir_target = os.path.join(
-                settings.PATH_DIR_TARGET, dir_path, title
+                settings.PATH_DIR_TARGET, dir_path, filename
             )
             if kit_name:
                 dir_target = os.path.join(
-                    settings.PATH_DIR_TARGET, dir_path, kit_name, title
+                    settings.PATH_DIR_TARGET, dir_path, kit_name, filename
                 )
 
             self.operation.create_dirs(dirname=dir_target)
-            self.operation.move_file(src=dir_source, dst=dir_target)
+            self.operation.move_file(source=dir_source, destiny=dir_target)
 
         except Exception as e:
             value.update(
@@ -102,18 +103,47 @@ class Robot:
         else:
             self.repo_control.add_control(value=value)
 
-    def returning_page(self, driver):
+    def get_file(self, driver, kit_info: dict, row: FilterModel):
+        list_img, list_title, list_button = self.list_files(driver=driver)
+        for image, title, button in zip(
+            list_img, list_title, list_button
+        ):
+            cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
+            pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
+            src = image.get_attribute("src")
+            if src != cdr and src != pdf:
+                title_text = title.text
+                logger.info(f"Downloading {title_text} ...")
+                download = self.download_file(
+                    button=button,
+                    kit_id=kit_info["kit_id"],
+                    title=title_text,
+                )
+                if download:
+                    logger.info(f"Moving file {title_text} ...")
+                    filename = f"{title_text.replace(' ', '+').replace(chr(10), '_')}.png"
+                    self.move_file(
+                        kit_id=kit_info["kit_id"],
+                        title=title_text,
+                        filename=filename,
+                        dir_path=os.path.join(
+                            row.subcategory4, row.subcategory5, row.subcategory6
+                        ),
+                        kit_name=kit_info["kit_name"] if row.kit_name else None,
+                    )
+
+    def returning_page(self, driver) -> None:
         driver.find_element(
             By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]'
         ).click()
 
-    def next_page(self, driver):
+    def next_page(self, driver) -> None:
         button = driver.execute_script(
             "return document.getElementsByClassName('fa fa-chevron-right')"
         )
         button[0].click()
 
-    def home_page(self, driver):
+    def home_page(self, driver) -> None:
         driver.find_element(
             By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
         ).click()
@@ -156,34 +186,7 @@ class Robot:
                     if not get_kit:
                         self.repo_kit.add_kit(value=kit_info)
 
-                    list_img, list_title, list_button = self.list_files(
-                        driver=driver
-                    )
-
-                    for image, title, button in zip(
-                        list_img, list_title, list_button
-                    ):
-                        cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
-                        pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
-                        src = image.get_attribute("src")
-                        if src != cdr and src != pdf:
-                            title_text = title.text
-                            logger.info(f"Downloading {title_text} ...")
-                            download = self.download_file(
-                                button=button,
-                                kit_id=kit_info["kit_id"],
-                                title=title_text,
-                            )
-                            if download:
-                                logger.info(f"Moving file {title_text} ...")
-                                self.move_file(
-                                    kit_id=kit_info["kit_id"],
-                                    title=title_text,
-                                    dir_path=os.path.join(
-                                        row.subcategory4, row.subcategory5, row.subcategory6
-                                    ),
-                                    kit_name=kit_info["kit_name"] if row.kit_name else None,
-                                )
+                    self.get_file(driver=driver, kit_info=kit_info, row=row)
 
                     logger.info("Returning to list of records page ...")
                     self.returning_page(driver=driver)

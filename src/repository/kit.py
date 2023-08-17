@@ -2,14 +2,14 @@ from typing import List, Optional
 
 from sqlalchemy import insert, select, update
 
-from src.database.connection import ConnectionDatabase
+from src.database.connection_sql import ConnectionSQLDatabase
 from src.models.kit import KitModel
 from src.utils.logger import logger
 
 
 class KitRepository:
     def __init__(self) -> None:
-        self.db = ConnectionDatabase().get_session()
+        self.db = ConnectionSQLDatabase().get_session()
 
     def insert_kit(self, value: dict) -> KitModel:
         stmt = insert(KitModel).values(value).returning(KitModel)

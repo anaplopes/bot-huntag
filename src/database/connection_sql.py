@@ -7,7 +7,7 @@ from src.settings import settings
 from src.utils.logger import logger
 
 
-class ConnectionDatabase:
+class ConnectionSQLDatabase:
     def __init__(self) -> None:
         self.__engine = self.create_connect()
 

@@ -1,7 +1,7 @@
 from logging.config import dictConfig
 
 from migration import migrate
-from src.database.connection import ConnectionDatabase
+from src.database.connection_sql import ConnectionSQLDatabase
 from src.usecases.v2.robot import Robot
 from src.utils.logger import Logger
 
@@ -10,7 +10,7 @@ if __name__ == "__main__":
     dictConfig(Logger().dict())
 
     # create tables
-    ConnectionDatabase().create_data_model()
+    ConnectionSQLDatabase().create_data_model()
 
     # migrate
     migrate.data_filter()

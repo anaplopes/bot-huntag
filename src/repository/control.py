@@ -2,14 +2,14 @@ from typing import List, Optional
 
 from sqlalchemy import insert, select, update
 
-from src.database.connection import ConnectionDatabase
+from src.database.connection_sql import ConnectionSQLDatabase
 from src.models.control import ControlModel
 from src.utils.logger import logger
 
 
 class ControlRepository:
     def __init__(self) -> None:
-        self.db = ConnectionDatabase().get_session()
+        self.db = ConnectionSQLDatabase().get_session()
 
     def insert_control(self, value: dict) -> ControlModel:
         stmt = insert(ControlModel).values(value).returning(ControlModel)

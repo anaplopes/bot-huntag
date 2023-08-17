@@ -2,14 +2,14 @@ from typing import List, Optional
 
 from sqlalchemy import delete, insert, select, update
 
-from src.database.connection import ConnectionDatabase
+from src.database.connection_sql import ConnectionSQLDatabase
 from src.models.filter import FilterModel
 from src.utils.logger import logger
 
 
 class FilterRepository:
     def __init__(self) -> None:
-        self.session = ConnectionDatabase().get_session()
+        self.session = ConnectionSQLDatabase().get_session()
 
     def delete_filter(self, _id: str) -> FilterModel:
         stmt = (
