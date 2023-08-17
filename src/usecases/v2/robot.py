@@ -51,7 +51,7 @@ class Robot:
         )
         return list_img_file, list_title_file, list_button_download
 
-    def download_file(self, button, kit_id: str, title: str) -> None:
+    def download_file(self, button, kit_id: str, title: str) -> bool:
         value = {
             "kit_id": kit_id,
             "file_name": title,
@@ -82,11 +82,11 @@ class Robot:
         try:
             dir_source = os.path.join(settings.PATH_DIR_SOURCE, filename)
             dir_target = os.path.join(
-                settings.PATH_DIR_TARGET, dir_path, filename
+                settings.PATH_DIR_TARGET, dir_path
             )
             if kit_name:
                 dir_target = os.path.join(
-                    settings.PATH_DIR_TARGET, dir_path, kit_name, filename
+                    settings.PATH_DIR_TARGET, dir_path, kit_name
                 )
 
             self.operation.create_dirs(dirname=dir_target)
@@ -122,6 +122,7 @@ class Robot:
                 if download:
                     logger.info(f"Moving file {title_text} ...")
                     filename = f"{title_text.replace(' ', '+').replace(chr(10), '_')}.png"
+                    time.sleep(10)
                     self.move_file(
                         kit_id=kit_info["kit_id"],
                         title=title_text,
