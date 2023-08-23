@@ -3,8 +3,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-from src.models.filter import FilterModel
-from src.utils.logger import logger
+from src.utils.conflog import logger
 
 
 class Filter:
@@ -16,7 +15,7 @@ class Filter:
             logger.info(f"Filtered category {category_name}.")
 
         except Exception as e:
-            logger.error(f"Filtered category error {category_name}")
+            logger.exception(f"Filtered category error {category_name}")
             raise Exception(f"Filtered category error: {str(e)}")
 
     def subcategory(self, driver, index: int, subcategory_name: str) -> None:
@@ -32,10 +31,10 @@ class Filter:
                 logger.info(f"Filtered subcategory {subcategory_name}.")
 
         except Exception as e:
-            logger.error(f"Filtered subcategory error {subcategory_name}")
+            logger.exception(f"Filtered subcategory error {subcategory_name}")
             raise Exception(f"Filtered subcategory error: {str(e)}")
 
-    def search(self, driver, row: FilterModel) -> None:
+    def search(self, driver, row) -> None:
         try:
             self.category(driver=driver, category_name=row.category)
             self.subcategory(
@@ -63,5 +62,5 @@ class Filter:
 
         except Exception as e:
             msg = f"Search Error: {str(e)}"
-            logger.error(msg)
+            logger.exception(msg)
             raise Exception(msg)

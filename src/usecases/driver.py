@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-from src.utils.logger import logger
+from src.utils.conflog import logger
 
 
 class Driver:
@@ -24,5 +24,5 @@ class Driver:
 
         except Exception as e:
             msg = f"Driver error: {str(e)}"
-            logger.error(msg)
+            logger.exception(msg)
             raise Exception(msg)

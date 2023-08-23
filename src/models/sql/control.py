@@ -4,10 +4,10 @@ from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
 
-from src.models.base import Base
+from src.models.sql.base import Base
 
 
-class ControlModel(Base):
+class ControlModelSQL(Base):
     __tablename__ = "download_control"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

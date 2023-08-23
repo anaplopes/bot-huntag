@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from src.settings import settings
-from src.utils.logger import logger
+from src.utils.conflog import logger
 
 
 class Login:
@@ -21,5 +21,5 @@ class Login:
 
         except Exception as e:
             msg = f"Sing in error: {str(e)}"
-            logger.error(msg)
+            logger.exception(msg)
             raise Exception(msg)

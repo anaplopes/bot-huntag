@@ -17,6 +17,7 @@ psycopg2-binary = "^2.9.6"
 azure-identity = "^1.13.0"
 msgraph-sdk = "^1.0.0a13"
 msal = "^1.23.0"
+mongoengine = "^0.27.0"
 
 
 [tool.poetry.group.dev.dependencies]

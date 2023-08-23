@@ -5,24 +5,22 @@ from math import ceil
 
 from selenium.webdriver.common.by import By
 
-from src.repository.control import ControlRepository
-from src.repository.filter import FilterRepository
-from src.repository.kit import KitRepository
 from src.settings import settings
+
 from src.usecases.driver import Driver
 from src.usecases.filter import Filter
-from src.usecases.kit import Kit
 from src.usecases.login import Login
-from src.utils.logger import logger
+from src.usecases.kit import Kit
+
+from src.utils.conflog import logger
 from src.utils.operating import OperatingSystem
-from src.models.filter import FilterModel
 
 
 class Robot:
-    def __init__(self):
-        self.repo_control = ControlRepository()
-        self.repo_filter = FilterRepository()
-        self.repo_kit = KitRepository()
+    def __init__(self, repo_control, repo_filter, repo_kit):
+        self.repo_control = repo_control
+        self.repo_filter = repo_filter
+        self.repo_kit = repo_kit
         self.operation = OperatingSystem()
 
     def list_records(self, driver):
@@ -51,9 +49,9 @@ class Robot:
         )
         return list_img_file, list_title_file, list_button_download
 
-    def download_file(self, button, kit_id: str, title: str) -> bool:
+    def download_file(self, button, kit_info: dict, title: str) -> bool:
         value = {
-            "kit_id": kit_id,
+            "kit_id": kit_info["kit_id"],
             "file_name": title,
             "action": "download_file",
             "status": "success",
@@ -71,9 +69,9 @@ class Robot:
             self.repo_control.add_control(value=value)
             return True
 
-    def move_file(self, kit_id: str, title: str, filename: str, dir_path: str, kit_name: bool) -> None:
+    def move_file(self, kit_info: dict, title: str, filename: str, dir_path: str, dir_kit_name: bool) -> None:
         value = {
-            "kit_id": kit_id,
+            "kit_id": kit_info["kit_id"],
             "file_name": title,
             "action": "move_file",
             "status": "success",
@@ -84,9 +82,9 @@ class Robot:
             dir_target = os.path.join(
                 settings.PATH_DIR_TARGET, dir_path
             )
-            if kit_name:
+            if dir_kit_name:
                 dir_target = os.path.join(
-                    settings.PATH_DIR_TARGET, dir_path, kit_name
+                    settings.PATH_DIR_TARGET, dir_path, kit_info["kit_name"]
                 )
 
             self.operation.create_dirs(dirname=dir_target)
@@ -103,7 +101,7 @@ class Robot:
         else:
             self.repo_control.add_control(value=value)
 
-    def get_file(self, driver, kit_info: dict, row: FilterModel):
+    def get_file(self, driver, kit_info: dict, row):
         list_img, list_title, list_button = self.list_files(driver=driver)
         for image, title, button in zip(
             list_img, list_title, list_button
@@ -116,21 +114,21 @@ class Robot:
                 logger.info(f"Downloading {title_text} ...")
                 download = self.download_file(
                     button=button,
-                    kit_id=kit_info["kit_id"],
+                    kit_info=kit_info,
                     title=title_text,
                 )
                 if download:
                     logger.info(f"Moving file {title_text} ...")
                     filename = f"{title_text.replace(' ', '+').replace(chr(10), '_')}.png"
-                    time.sleep(10)
+                    time.sleep(120)  # 2 minutos
                     self.move_file(
-                        kit_id=kit_info["kit_id"],
+                        kit_id=kit_info,
                         title=title_text,
                         filename=filename,
                         dir_path=os.path.join(
                             row.subcategory4, row.subcategory5, row.subcategory6
                         ),
-                        kit_name=kit_info["kit_name"] if row.kit_name else None,
+                        dir_kit_name=row.dir_kit_name,
                     )
 
     def returning_page(self, driver) -> None:
@@ -213,7 +211,7 @@ class Robot:
 
         except Exception as e:
             error = str(e)
-            logger.error(error)
+            logger.exception(error)
             return error
 
         finally:

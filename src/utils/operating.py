@@ -45,16 +45,22 @@ class OperatingSystem:
     def move_file(self, source: str, destiny: str) -> bool:
         _source = self.exists(path=source)
         if _source:
-            # os.rename(src=source, dst=destiny)
-            shutil.move(src=source, dst=destiny)
-            return True
+            try:
+                # os.rename(src=source, dst=destiny)
+                shutil.move(src=source, dst=destiny)
+                return True
+            except Exception:
+                return False
         return False
 
     def copy_file(self, source: str, destiny: str) -> bool:
         _source = self.exists(path=source)
         if _source:
-            shutil.copy(src=source, dst=destiny)
-            return True
+            try:
+                shutil.copy(src=source, dst=destiny)
+                return True
+            except Exception:
+                return False
         return False
 
     def delete_file(self, filename: str) -> bool:

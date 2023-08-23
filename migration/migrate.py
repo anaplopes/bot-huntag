@@ -1,12 +1,10 @@
 import json
 import sys
 
-from src.repository.filter import FilterRepository
-from src.utils.logger import logger
+from src.utils.conflog import logger
 
 
-def data_filter():
-    repo = FilterRepository()
+def data_filter(repo):
     list_filter = repo.select_all()
     if not list_filter:
         path = "migration\\filter_huntag_v2.json"

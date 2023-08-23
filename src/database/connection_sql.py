@@ -2,9 +2,9 @@ from sqlalchemy import Engine, create_engine
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session, sessionmaker
 
-from src.models.base import Base
+from src.models.sql.base import Base
 from src.settings import settings
-from src.utils.logger import logger
+from src.utils.conflog import logger
 
 
 class ConnectionSQLDatabase:

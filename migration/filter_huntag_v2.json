@@ -7,7 +7,7 @@
         "subcategory4": "Micro Merchan",
         "subcategory5": "00. Geral loja",
         "subcategory6": "Consumíveis",
-        "kit_name": true
+        "dir_kit_name": true
     },
     {
         "category": "Merchandising",
@@ -16,8 +16,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "00. Geral loja",
-        "subcategory6": "Extensão de gama",
-        "kit_name": false
+        "subcategory6": "Extensão de gama"
     },
     {
         "category": "Merchandising",
@@ -26,8 +25,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "00. Geral loja",
-        "subcategory6": "Produtos responsáveis",
-        "kit_name": false
+        "subcategory6": "Produtos responsáveis"
     },
     {
         "category": "Merchandising",
@@ -36,8 +34,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Argamassas",
-        "kit_name": false
+        "subcategory6": " Argamassas"
     },
     {
         "category": "Merchandising",
@@ -46,8 +43,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Blocos de vidro",
-        "kit_name": false
+        "subcategory6": " Blocos de vidro"
     },
     {
         "category": "Merchandising",
@@ -56,8 +52,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Caixas d'água",
-        "kit_name": false
+        "subcategory6": " Caixas d'água"
     },
     {
         "category": "Merchandising",
@@ -66,8 +61,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Cimentos, areia, pedra e cascalho",
-        "kit_name": false
+        "subcategory6": " Cimentos, areia, pedra e cascalho"
     },
     {
         "category": "Merchandising",
@@ -76,8 +70,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Madeiramento para construção",
-        "kit_name": false
+        "subcategory6": " Madeiramento para construção"
     },
     {
         "category": "Merchandising",
@@ -86,8 +79,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": " Proteção e limpeza de obras",
-        "kit_name": false
+        "subcategory6": " Proteção e limpeza de obras"
     },
     {
         "category": "Merchandising",
@@ -96,8 +88,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Aço para construção",
-        "kit_name": false
+        "subcategory6": "Aço para construção"
     },
     {
         "category": "Merchandising",
@@ -106,8 +97,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Blocos e tijolos",
-        "kit_name": false
+        "subcategory6": "Blocos e tijolos"
     },
     {
         "category": "Merchandising",
@@ -116,8 +106,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Caixas de gordura",
-        "kit_name": false
+        "subcategory6": "Caixas de gordura"
     },
     {
         "category": "Merchandising",
@@ -126,8 +115,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Calhas",
-        "kit_name": false
+        "subcategory6": "Calhas"
     },
     {
         "category": "Merchandising",
@@ -136,8 +124,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Carrinhos de mão",
-        "kit_name": false
+        "subcategory6": "Carrinhos de mão"
     },
     {
         "category": "Merchandising",
@@ -146,8 +133,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Coberturas",
-        "kit_name": false
+        "subcategory6": "Coberturas"
     },
     {
         "category": "Merchandising",
@@ -156,8 +142,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Drywall",
-        "kit_name": false
+        "subcategory6": "Drywall"
     },
     {
         "category": "Merchandising",
@@ -166,8 +151,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Elementos vazados cobogó",
-        "kit_name": false
+        "subcategory6": "Elementos vazados cobogó"
     },
     {
         "category": "Merchandising",
@@ -176,8 +160,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Escadas",
-        "kit_name": false
+        "subcategory6": "Escadas"
     },
     {
         "category": "Merchandising",
@@ -186,8 +169,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Grelhas",
-        "kit_name": false
+        "subcategory6": "Grelhas"
     },
     {
         "category": "Merchandising",
@@ -196,8 +178,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Impermeabilizantes",
-        "kit_name": false
+        "subcategory6": "Impermeabilizantes"
     },
     {
         "category": "Merchandising",
@@ -206,8 +187,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Isolamentos",
-        "kit_name": false
+        "subcategory6": "Isolamentos"
     },
     {
         "category": "Merchandising",
@@ -216,8 +196,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Madeiramento para telhado",
-        "kit_name": false
+        "subcategory6": "Madeiramento para telhado"
     },
     {
         "category": "Merchandising",
@@ -226,8 +205,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Segurança de muros",
-        "kit_name": false
+        "subcategory6": "Segurança de muros"
     },
     {
         "category": "Merchandising",
@@ -236,8 +214,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "01. Materiais de construção",
-        "subcategory6": "Subcoberturas",
-        "kit_name": false
+        "subcategory6": "Subcoberturas"
     },
     {
         "category": "Merchandising",
@@ -246,8 +223,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": " Projetos",
-        "kit_name": false
+        "subcategory6": " Projetos"
     },
     {
         "category": "Merchandising",
@@ -256,8 +232,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Bricolagem/ Marcenaria",
-        "kit_name": false
+        "subcategory6": "Bricolagem/ Marcenaria"
     },
     {
         "category": "Merchandising",
@@ -266,8 +241,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Chapas",
-        "kit_name": false
+        "subcategory6": "Chapas"
     },
     {
         "category": "Merchandising",
@@ -276,8 +250,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Esquadrias ",
-        "kit_name": false
+        "subcategory6": "Esquadrias "
     },
     {
         "category": "Merchandising",
@@ -286,8 +259,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Porta de entrada",
-        "kit_name": false
+        "subcategory6": "Porta de entrada"
     },
     {
         "category": "Merchandising",
@@ -296,8 +268,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Portas para áreas internas",
-        "kit_name": false
+        "subcategory6": "Portas para áreas internas"
     },
     {
         "category": "Merchandising",
@@ -306,8 +277,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "02. Madeiras, portas e janelas",
-        "subcategory6": "Show Room de portas e esquadrias",
-        "kit_name": false
+        "subcategory6": "Show Room de portas e esquadrias"
     },
     {
         "category": "Merchandising",
@@ -316,8 +286,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Abraçadeiras plásticas",
-        "kit_name": false
+        "subcategory6": "Abraçadeiras plásticas"
     },
     {
         "category": "Merchandising",
@@ -326,8 +295,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Adaptadores, Benjamins e Plugs",
-        "kit_name": false
+        "subcategory6": "Adaptadores, Benjamins e Plugs"
     },
     {
         "category": "Merchandising",
@@ -336,8 +304,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Alarmes e cercas elétricas",
-        "kit_name": false
+        "subcategory6": "Alarmes e cercas elétricas"
     },
     {
         "category": "Merchandising",
@@ -346,8 +313,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Alarmes para incêndio",
-        "kit_name": false
+        "subcategory6": "Alarmes para incêndio"
     },
     {
         "category": "Merchandising",
@@ -356,8 +322,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Antenas",
-        "kit_name": false
+        "subcategory6": "Antenas"
     },
     {
         "category": "Merchandising",
@@ -366,8 +331,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Aquecedores",
-        "kit_name": false
+        "subcategory6": "Aquecedores"
     },
     {
         "category": "Merchandising",
@@ -376,8 +340,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Ar condicionado",
-        "kit_name": false
+        "subcategory6": "Ar condicionado"
     },
     {
         "category": "Merchandising",
@@ -386,8 +349,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Cabos Audio e Video - HDMI, CFTV e REDE",
-        "kit_name": false
+        "subcategory6": "Cabos Audio e Video - HDMI, CFTV e REDE"
     },
     {
         "category": "Merchandising",
@@ -396,8 +358,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Cabos e fios",
-        "kit_name": false
+        "subcategory6": "Cabos e fios"
     },
     {
         "category": "Merchandising",
@@ -406,8 +367,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Cabos e fios a metro",
-        "kit_name": false
+        "subcategory6": "Cabos e fios a metro"
     },
     {
         "category": "Merchandising",
@@ -416,8 +376,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Cabos USB e informática",
-        "kit_name": false
+        "subcategory6": "Cabos USB e informática"
     },
     {
         "category": "Merchandising",
@@ -426,8 +385,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Caixas de distribuição",
-        "kit_name": false
+        "subcategory6": "Caixas de distribuição"
     },
     {
         "category": "Merchandising",
@@ -436,8 +394,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Caixas de entrada de energia",
-        "kit_name": false
+        "subcategory6": "Caixas de entrada de energia"
     },
     {
         "category": "Merchandising",
@@ -446,8 +403,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Caixas de passagem para cabos",
-        "kit_name": false
+        "subcategory6": "Caixas de passagem para cabos"
     },
     {
         "category": "Merchandising",
@@ -456,8 +412,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Campainhas",
-        "kit_name": false
+        "subcategory6": "Campainhas"
     },
     {
         "category": "Merchandising",
@@ -466,8 +421,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Canaletas",
-        "kit_name": false
+        "subcategory6": "Canaletas"
     },
     {
         "category": "Merchandising",
@@ -476,8 +430,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Casa conectada",
-        "kit_name": false
+        "subcategory6": "Casa conectada"
     },
     {
         "category": "Merchandising",
@@ -486,8 +439,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Climatizadores",
-        "kit_name": false
+        "subcategory6": "Climatizadores"
     },
     {
         "category": "Merchandising",
@@ -496,8 +448,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Conduítes Corrugados e Caixas de luz ",
-        "kit_name": false
+        "subcategory6": "Conduítes Corrugados e Caixas de luz "
     },
     {
         "category": "Merchandising",
@@ -506,8 +457,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Disjuntores",
-        "kit_name": false
+        "subcategory6": "Disjuntores"
     },
     {
         "category": "Merchandising",
@@ -516,8 +466,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Eletrocalhas",
-        "kit_name": false
+        "subcategory6": "Eletrocalhas"
     },
     {
         "category": "Merchandising",
@@ -526,8 +475,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Eletrodutos Zincado e PVC",
-        "kit_name": false
+        "subcategory6": "Eletrodutos Zincado e PVC"
     },
     {
         "category": "Merchandising",
@@ -536,8 +484,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Energia Solar",
-        "kit_name": false
+        "subcategory6": "Energia Solar"
     },
     {
         "category": "Merchandising",
@@ -546,8 +493,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Estabilizadores, No breaks e Transformadores",
-        "kit_name": false
+        "subcategory6": "Estabilizadores, No breaks e Transformadores"
     },
     {
         "category": "Merchandising",
@@ -556,8 +502,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Exaustores",
-        "kit_name": false
+        "subcategory6": "Exaustores"
     },
     {
         "category": "Merchandising",
@@ -566,8 +511,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Extensões e Filtros de linha",
-        "kit_name": false
+        "subcategory6": "Extensões e Filtros de linha"
     },
     {
         "category": "Merchandising",
@@ -576,8 +520,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Fechaduras elétricas",
-        "kit_name": false
+        "subcategory6": "Fechaduras elétricas"
     },
     {
         "category": "Merchandising",
@@ -586,8 +529,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Fitas isolantes e conexões para fio",
-        "kit_name": false
+        "subcategory6": "Fitas isolantes e conexões para fio"
     },
     {
         "category": "Merchandising",
@@ -596,8 +538,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Interfones",
-        "kit_name": false
+        "subcategory6": "Interfones"
     },
     {
         "category": "Merchandising",
@@ -606,8 +547,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Interruptores e Tomadas",
-        "kit_name": false
+        "subcategory6": "Interruptores e Tomadas"
     },
     {
         "category": "Merchandising",
@@ -616,8 +556,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Jogo da iluminação ",
-        "kit_name": false
+        "subcategory6": "Jogo da iluminação "
     },
     {
         "category": "Merchandising",
@@ -626,8 +565,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Kit de monitoramento",
-        "kit_name": false
+        "subcategory6": "Kit de monitoramento"
     },
     {
         "category": "Merchandising",
@@ -636,8 +574,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Lanternas e Luminárias de emergência",
-        "kit_name": false
+        "subcategory6": "Lanternas e Luminárias de emergência"
     },
     {
         "category": "Merchandising",
@@ -646,8 +583,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Motores para portão",
-        "kit_name": false
+        "subcategory6": "Motores para portão"
     },
     {
         "category": "Merchandising",
@@ -656,8 +592,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Organizadores de cabos",
-        "kit_name": false
+        "subcategory6": "Organizadores de cabos"
     },
     {
         "category": "Merchandising",
@@ -666,8 +601,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Pilhas",
-        "kit_name": false
+        "subcategory6": "Pilhas"
     },
     {
         "category": "Merchandising",
@@ -676,8 +610,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Roteadores",
-        "kit_name": false
+        "subcategory6": "Roteadores"
     },
     {
         "category": "Merchandising",
@@ -686,8 +619,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Sensores de presença",
-        "kit_name": false
+        "subcategory6": "Sensores de presença"
     },
     {
         "category": "Merchandising",
@@ -696,8 +628,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Suportes para eletro",
-        "kit_name": false
+        "subcategory6": "Suportes para eletro"
     },
     {
         "category": "Merchandising",
@@ -706,8 +637,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Telefones",
-        "kit_name": false
+        "subcategory6": "Telefones"
     },
     {
         "category": "Merchandising",
@@ -716,8 +646,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Tratamento do ar",
-        "kit_name": false
+        "subcategory6": "Tratamento do ar"
     },
     {
         "category": "Merchandising",
@@ -726,8 +655,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Ventiladores",
-        "kit_name": false
+        "subcategory6": "Ventiladores"
     },
     {
         "category": "Merchandising",
@@ -736,8 +664,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Video porteiro",
-        "kit_name": false
+        "subcategory6": "Video porteiro"
     },
     {
         "category": "Merchandising",
@@ -746,8 +673,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "03. Materiais elétricos",
-        "subcategory6": "Telefones",
-        "kit_name": false
+        "subcategory6": "Telefones"
     },
     {
         "category": "Merchandising",
@@ -756,8 +682,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Acessórios para ferramentas elétricas",
-        "kit_name": false
+        "subcategory6": "Acessórios para ferramentas elétricas"
     },
     {
         "category": "Merchandising",
@@ -766,8 +691,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Acessórios para máquinas de solda",
-        "kit_name": false
+        "subcategory6": "Acessórios para máquinas de solda"
     },
     {
         "category": "Merchandising",
@@ -776,8 +700,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Alicates",
-        "kit_name": false
+        "subcategory6": "Alicates"
     },
     {
         "category": "Merchandising",
@@ -786,8 +709,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Arcos de serra",
-        "kit_name": false
+        "subcategory6": "Arcos de serra"
     },
     {
         "category": "Merchandising",
@@ -796,8 +718,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Ármarios, painéis e prateleiras",
-        "kit_name": false
+        "subcategory6": "Ármarios, painéis e prateleiras"
     },
     {
         "category": "Merchandising",
@@ -806,8 +727,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Aspiradores",
-        "kit_name": false
+        "subcategory6": "Aspiradores"
     },
     {
         "category": "Merchandising",
@@ -816,8 +736,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Bancadas e carrinhos de oficina",
-        "kit_name": false
+        "subcategory6": "Bancadas e carrinhos de oficina"
     },
     {
         "category": "Merchandising",
@@ -826,8 +745,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Bits para parafusadeira",
-        "kit_name": false
+        "subcategory6": "Bits para parafusadeira"
     },
     {
         "category": "Merchandising",
@@ -836,8 +754,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Botas impermeáveis",
-        "kit_name": false
+        "subcategory6": "Botas impermeáveis"
     },
     {
         "category": "Merchandising",
@@ -846,8 +763,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Botinas de segurança com cadarço",
-        "kit_name": false
+        "subcategory6": "Botinas de segurança com cadarço"
     },
     {
         "category": "Merchandising",
@@ -856,8 +772,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Botinas de segurança com elástico",
-        "kit_name": false
+        "subcategory6": "Botinas de segurança com elástico"
     },
     {
         "category": "Merchandising",
@@ -866,8 +781,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Brocas e serras copo",
-        "kit_name": false
+        "subcategory6": "Brocas e serras copo"
     },
     {
         "category": "Merchandising",
@@ -876,8 +790,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Caixas de ferramentas organizadores",
-        "kit_name": false
+        "subcategory6": "Caixas de ferramentas organizadores"
     },
     {
         "category": "Merchandising",
@@ -886,8 +799,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Calçados ocupacionais",
-        "kit_name": false
+        "subcategory6": "Calçados ocupacionais"
     },
     {
         "category": "Merchandising",
@@ -896,8 +808,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Capacetes de segurança",
-        "kit_name": false
+        "subcategory6": "Capacetes de segurança"
     },
     {
         "category": "Merchandising",
@@ -906,8 +817,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Capas de chuva e uniformes",
-        "kit_name": false
+        "subcategory6": "Capas de chuva e uniformes"
     },
     {
         "category": "Merchandising",
@@ -916,8 +826,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Chaves",
-        "kit_name": false
+        "subcategory6": "Chaves"
     },
     {
         "category": "Merchandising",
@@ -926,8 +835,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Cintos de segurança e talabartes",
-        "kit_name": false
+        "subcategory6": "Cintos de segurança e talabartes"
     },
     {
         "category": "Merchandising",
@@ -936,8 +844,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Compresores de ar direto e regular",
-        "kit_name": false
+        "subcategory6": "Compresores de ar direto e regular"
     },
     {
         "category": "Merchandising",
@@ -946,8 +853,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Cortadores de piso elétricos",
-        "kit_name": false
+        "subcategory6": "Cortadores de piso elétricos"
     },
     {
         "category": "Merchandising",
@@ -956,8 +862,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Cortadores de piso manuais",
-        "kit_name": false
+        "subcategory6": "Cortadores de piso manuais"
     },
     {
         "category": "Merchandising",
@@ -966,8 +871,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Desengraxantes e lubrificantes",
-        "kit_name": false
+        "subcategory6": "Desengraxantes e lubrificantes"
     },
     {
         "category": "Merchandising",
@@ -976,8 +880,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Discos de esmerilhadeira para meta",
-        "kit_name": false
+        "subcategory6": "Discos de esmerilhadeira para meta"
     },
     {
         "category": "Merchandising",
@@ -986,8 +889,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Discos de esmerilhadeira para revestimentos",
-        "kit_name": false
+        "subcategory6": "Discos de esmerilhadeira para revestimentos"
     },
     {
         "category": "Merchandising",
@@ -996,8 +898,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Discos de serra circular e laminas de tico-tico",
-        "kit_name": false
+        "subcategory6": "Discos de serra circular e laminas de tico-tico"
     },
     {
         "category": "Merchandising",
@@ -1006,8 +907,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Discos de serra mármore",
-        "kit_name": false
+        "subcategory6": "Discos de serra mármore"
     },
     {
         "category": "Merchandising",
@@ -1016,8 +916,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Equipamentos de proteção para soldar",
-        "kit_name": false
+        "subcategory6": "Equipamentos de proteção para soldar"
     },
     {
         "category": "Merchandising",
@@ -1026,8 +925,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Esmerilhadeiras",
-        "kit_name": false
+        "subcategory6": "Esmerilhadeiras"
     },
     {
         "category": "Merchandising",
@@ -1036,8 +934,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Estiletes e Tesouras",
-        "kit_name": false
+        "subcategory6": "Estiletes e Tesouras"
     },
     {
         "category": "Merchandising",
@@ -1046,8 +943,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Extratoras",
-        "kit_name": false
+        "subcategory6": "Extratoras"
     },
     {
         "category": "Merchandising",
@@ -1056,8 +952,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Ferramentas para encanador",
-        "kit_name": false
+        "subcategory6": "Ferramentas para encanador"
     },
     {
         "category": "Merchandising",
@@ -1066,8 +961,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Ferramentas para pedreiro",
-        "kit_name": false
+        "subcategory6": "Ferramentas para pedreiro"
     },
     {
         "category": "Merchandising",
@@ -1076,8 +970,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Ferramentas pneumáticas",
-        "kit_name": false
+        "subcategory6": "Ferramentas pneumáticas"
     },
     {
         "category": "Merchandising",
@@ -1086,8 +979,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Ferros de solda e medidores para eletricista",
-        "kit_name": false
+        "subcategory6": "Ferros de solda e medidores para eletricista"
     },
     {
         "category": "Merchandising",
@@ -1096,8 +988,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Furadeira de bancada moto esmeril",
-        "kit_name": false
+        "subcategory6": "Furadeira de bancada moto esmeril"
     },
     {
         "category": "Merchandising",
@@ -1106,8 +997,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Furadeira parafusadeira ",
-        "kit_name": false
+        "subcategory6": "Furadeira parafusadeira "
     },
     {
         "category": "Merchandising",
@@ -1116,8 +1006,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Geradores de energia",
-        "kit_name": false
+        "subcategory6": "Geradores de energia"
     },
     {
         "category": "Merchandising",
@@ -1126,8 +1015,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Grampeadores e rebitadores",
-        "kit_name": false
+        "subcategory6": "Grampeadores e rebitadores"
     },
     {
         "category": "Merchandising",
@@ -1136,8 +1024,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Grampos e sargentos",
-        "kit_name": false
+        "subcategory6": "Grampos e sargentos"
     },
     {
         "category": "Merchandising",
@@ -1146,8 +1033,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Grosas, limas, formões e plainas",
-        "kit_name": false
+        "subcategory6": "Grosas, limas, formões e plainas"
     },
     {
         "category": "Merchandising",
@@ -1156,8 +1042,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Guinchos, morças e talhas",
-        "kit_name": false
+        "subcategory6": "Guinchos, morças e talhas"
     },
     {
         "category": "Merchandising",
@@ -1166,8 +1051,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Jogos de broca e bits",
-        "kit_name": false
+        "subcategory6": "Jogos de broca e bits"
     },
     {
         "category": "Merchandising",
@@ -1176,8 +1060,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Jogos de ferramentas",
-        "kit_name": false
+        "subcategory6": "Jogos de ferramentas"
     },
     {
         "category": "Merchandising",
@@ -1186,8 +1069,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Limpadores à vapor",
-        "kit_name": false
+        "subcategory6": "Limpadores à vapor"
     },
     {
         "category": "Merchandising",
@@ -1196,8 +1078,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Lixadeiras eletricas",
-        "kit_name": false
+        "subcategory6": "Lixadeiras eletricas"
     },
     {
         "category": "Merchandising",
@@ -1206,8 +1087,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Lixas manuais e taco lixador",
-        "kit_name": false
+        "subcategory6": "Lixas manuais e taco lixador"
     },
     {
         "category": "Merchandising",
@@ -1216,8 +1096,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Lixas para máquinas",
-        "kit_name": false
+        "subcategory6": "Lixas para máquinas"
     },
     {
         "category": "Merchandising",
@@ -1226,8 +1105,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Luvas de proteção para área seca",
-        "kit_name": false
+        "subcategory6": "Luvas de proteção para área seca"
     },
     {
         "category": "Merchandising",
@@ -1236,8 +1114,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Luvas de proteção para área úmida",
-        "kit_name": false
+        "subcategory6": "Luvas de proteção para área úmida"
     },
     {
         "category": "Merchandising",
@@ -1246,8 +1123,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Máquinas de solda",
-        "kit_name": false
+        "subcategory6": "Máquinas de solda"
     },
     {
         "category": "Merchandising",
@@ -1256,8 +1132,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Marretas e martelos",
-        "kit_name": false
+        "subcategory6": "Marretas e martelos"
     },
     {
         "category": "Merchandising",
@@ -1266,8 +1141,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Marteletes",
-        "kit_name": false
+        "subcategory6": "Marteletes"
     },
     {
         "category": "Merchandising",
@@ -1276,8 +1150,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Martelo demolidor",
-        "kit_name": false
+        "subcategory6": "Martelo demolidor"
     },
     {
         "category": "Merchandising",
@@ -1286,8 +1159,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Máscaras de proteção e protetor auricular",
-        "kit_name": false
+        "subcategory6": "Máscaras de proteção e protetor auricular"
     },
     {
         "category": "Merchandising",
@@ -1296,8 +1168,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Medidores laser",
-        "kit_name": false
+        "subcategory6": "Medidores laser"
     },
     {
         "category": "Merchandising",
@@ -1306,8 +1177,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Micro retífica",
-        "kit_name": false
+        "subcategory6": "Micro retífica"
     },
     {
         "category": "Merchandising",
@@ -1316,8 +1186,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Multicortadoras oscilantes",
-        "kit_name": false
+        "subcategory6": "Multicortadoras oscilantes"
     },
     {
         "category": "Merchandising",
@@ -1326,8 +1195,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Níveis manuais",
-        "kit_name": false
+        "subcategory6": "Níveis manuais"
     },
     {
         "category": "Merchandising",
@@ -1336,8 +1204,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Óculos de proteção",
-        "kit_name": false
+        "subcategory6": "Óculos de proteção"
     },
     {
         "category": "Merchandising",
@@ -1346,8 +1213,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Parafusadeiras",
-        "kit_name": false
+        "subcategory6": "Parafusadeiras"
     },
     {
         "category": "Merchandising",
@@ -1356,8 +1222,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Pistolas de cola quente e aplicador de silicone",
-        "kit_name": false
+        "subcategory6": "Pistolas de cola quente e aplicador de silicone"
     },
     {
         "category": "Merchandising",
@@ -1366,8 +1231,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Plainas e tupias",
-        "kit_name": false
+        "subcategory6": "Plainas e tupias"
     },
     {
         "category": "Merchandising",
@@ -1376,8 +1240,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Sapatos e tênis de segurança",
-        "kit_name": false
+        "subcategory6": "Sapatos e tênis de segurança"
     },
     {
         "category": "Merchandising",
@@ -1386,8 +1249,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Sapatos em eva",
-        "kit_name": false
+        "subcategory6": "Sapatos em eva"
     },
     {
         "category": "Merchandising",
@@ -1396,8 +1258,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Serra de bancada",
-        "kit_name": false
+        "subcategory6": "Serra de bancada"
     },
     {
         "category": "Merchandising",
@@ -1406,8 +1267,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Serra esquadria",
-        "kit_name": false
+        "subcategory6": "Serra esquadria"
     },
     {
         "category": "Merchandising",
@@ -1416,8 +1276,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Serra mármore",
-        "kit_name": false
+        "subcategory6": "Serra mármore"
     },
     {
         "category": "Merchandising",
@@ -1426,8 +1285,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Serra tico-tico e serra sabre",
-        "kit_name": false
+        "subcategory6": "Serra tico-tico e serra sabre"
     },
     {
         "category": "Merchandising",
@@ -1436,8 +1294,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Serrotes",
-        "kit_name": false
+        "subcategory6": "Serrotes"
     },
     {
         "category": "Merchandising",
@@ -1446,8 +1303,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Sopradores térmicos",
-        "kit_name": false
+        "subcategory6": "Sopradores térmicos"
     },
     {
         "category": "Merchandising",
@@ -1456,8 +1312,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "04. Ferramentas",
-        "subcategory6": "Trenas manuais",
-        "kit_name": false
+        "subcategory6": "Trenas manuais"
     },
     {
         "category": "Merchandising",
@@ -1466,8 +1321,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Acessórios para pisos de madeira (Rodapés,perfils)",
-        "kit_name": false
+        "subcategory6": "Acessórios para pisos de madeira (Rodapés,perfils)"
     },
     {
         "category": "Merchandising",
@@ -1476,8 +1330,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Acessórios para pisos laminados (Rodapés, perfis)",
-        "kit_name": false
+        "subcategory6": "Acessórios para pisos laminados (Rodapés, perfis)"
     },
     {
         "category": "Merchandising",
@@ -1486,8 +1339,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Acessórios para pisos vinílicos (Perfis)",
-        "kit_name": false
+        "subcategory6": "Acessórios para pisos vinílicos (Perfis)"
     },
     {
         "category": "Merchandising",
@@ -1496,8 +1348,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Colas",
-        "kit_name": false
+        "subcategory6": "Colas"
     },
     {
         "category": "Merchandising",
@@ -1506,8 +1357,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Mantas para pisos laminados",
-        "kit_name": false
+        "subcategory6": "Mantas para pisos laminados"
     },
     {
         "category": "Merchandising",
@@ -1516,8 +1366,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Mantas para pisos vinílicos",
-        "kit_name": false
+        "subcategory6": "Mantas para pisos vinílicos"
     },
     {
         "category": "Merchandising",
@@ -1526,8 +1375,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Pisos de madeira",
-        "kit_name": false
+        "subcategory6": "Pisos de madeira"
     },
     {
         "category": "Merchandising",
@@ -1536,8 +1384,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Pisos emborrachados",
-        "kit_name": false
+        "subcategory6": "Pisos emborrachados"
     },
     {
         "category": "Merchandising",
@@ -1546,8 +1393,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Pisos laminados",
-        "kit_name": false
+        "subcategory6": "Pisos laminados"
     },
     {
         "category": "Merchandising",
@@ -1556,8 +1402,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Pisos vinílicos",
-        "kit_name": false
+        "subcategory6": "Pisos vinílicos"
     },
     {
         "category": "Merchandising",
@@ -1566,8 +1411,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Pisos vinílicos em manta",
-        "kit_name": false
+        "subcategory6": "Pisos vinílicos em manta"
     },
     {
         "category": "Merchandising",
@@ -1576,8 +1420,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "05. Pisos laminados e vinílicos",
-        "subcategory6": "Rodapés",
-        "kit_name": false
+        "subcategory6": "Rodapés"
     },
     {
         "category": "Merchandising",
@@ -1586,8 +1429,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Cantoneiras",
-        "kit_name": false
+        "subcategory6": "Cantoneiras"
     },
     {
         "category": "Merchandising",
@@ -1596,8 +1438,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Espaçadores",
-        "kit_name": false
+        "subcategory6": "Espaçadores"
     },
     {
         "category": "Merchandising",
@@ -1606,8 +1447,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Mosaicos",
-        "kit_name": false
+        "subcategory6": "Mosaicos"
     },
     {
         "category": "Merchandising",
@@ -1616,8 +1456,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Nichos",
-        "kit_name": false
+        "subcategory6": "Nichos"
     },
     {
         "category": "Merchandising",
@@ -1626,8 +1465,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Pastilhas",
-        "kit_name": false
+        "subcategory6": "Pastilhas"
     },
     {
         "category": "Merchandising",
@@ -1636,8 +1474,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Pedras naturais",
-        "kit_name": false
+        "subcategory6": "Pedras naturais"
     },
     {
         "category": "Merchandising",
@@ -1646,8 +1483,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Pisos decorado peça",
-        "kit_name": false
+        "subcategory6": "Pisos decorado peça"
     },
     {
         "category": "Merchandising",
@@ -1656,8 +1492,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Pisos para calçada e garagem",
-        "kit_name": false
+        "subcategory6": "Pisos para calçada e garagem"
     },
     {
         "category": "Merchandising",
@@ -1666,8 +1501,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos cor bege",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos cor bege"
     },
     {
         "category": "Merchandising",
@@ -1676,8 +1510,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos cor branco",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos cor branco"
     },
     {
         "category": "Merchandising",
@@ -1686,8 +1519,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos cor cinza",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos cor cinza"
     },
     {
         "category": "Merchandising",
@@ -1696,8 +1528,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos cor marrom/preto",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos cor marrom/preto"
     },
     {
         "category": "Merchandising",
@@ -1706,8 +1537,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos decorado",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos decorado"
     },
     {
         "category": "Merchandising",
@@ -1716,8 +1546,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Porcelanatos e pisos tipo madeirado",
-        "kit_name": false
+        "subcategory6": "Porcelanatos e pisos tipo madeirado"
     },
     {
         "category": "Merchandising",
@@ -1726,8 +1555,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Rejuntes",
-        "kit_name": false
+        "subcategory6": "Rejuntes"
     },
     {
         "category": "Merchandising",
@@ -1736,8 +1564,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento decorado peça",
-        "kit_name": false
+        "subcategory6": "Revestimento decorado peça"
     },
     {
         "category": "Merchandising",
@@ -1746,8 +1573,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento interno decorado",
-        "kit_name": false
+        "subcategory6": "Revestimento interno decorado"
     },
     {
         "category": "Merchandising",
@@ -1756,8 +1582,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento interno monocolor",
-        "kit_name": false
+        "subcategory6": "Revestimento interno monocolor"
     },
     {
         "category": "Merchandising",
@@ -1766,8 +1591,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento interno tipo marmore",
-        "kit_name": false
+        "subcategory6": "Revestimento interno tipo marmore"
     },
     {
         "category": "Merchandising",
@@ -1776,8 +1600,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento para fachada",
-        "kit_name": false
+        "subcategory6": "Revestimento para fachada"
     },
     {
         "category": "Merchandising",
@@ -1786,8 +1609,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Revestimento para piscina",
-        "kit_name": false
+        "subcategory6": "Revestimento para piscina"
     },
     {
         "category": "Merchandising",
@@ -1796,8 +1618,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Rodapés",
-        "kit_name": false
+        "subcategory6": "Rodapés"
     },
     {
         "category": "Merchandising",
@@ -1806,8 +1627,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "06. Pisos e revestimentos",
-        "subcategory6": "Soleiras",
-        "kit_name": false
+        "subcategory6": "Soleiras"
     },
     {
         "category": "Merchandising",
@@ -1816,8 +1636,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Acessórios fixar para parede de banheiro",
-        "kit_name": false
+        "subcategory6": "Acessórios fixar para parede de banheiro"
     },
     {
         "category": "Merchandising",
@@ -1826,8 +1645,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Acessórios para bancada de banheiro",
-        "kit_name": false
+        "subcategory6": "Acessórios para bancada de banheiro"
     },
     {
         "category": "Merchandising",
@@ -1836,8 +1654,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Assentos sanitários",
-        "kit_name": false
+        "subcategory6": "Assentos sanitários"
     },
     {
         "category": "Merchandising",
@@ -1846,8 +1663,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Balanças",
-        "kit_name": false
+        "subcategory6": "Balanças"
     },
     {
         "category": "Merchandising",
@@ -1856,8 +1672,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Bancadas para banheiro",
-        "kit_name": false
+        "subcategory6": "Bancadas para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1866,8 +1681,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Banheiras, SPAs e ofurôs",
-        "kit_name": false
+        "subcategory6": "Banheiras, SPAs e ofurôs"
     },
     {
         "category": "Merchandising",
@@ -1876,8 +1690,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Barras de apoio e segurança",
-        "kit_name": false
+        "subcategory6": "Barras de apoio e segurança"
     },
     {
         "category": "Merchandising",
@@ -1886,8 +1699,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Box para banheiro",
-        "kit_name": false
+        "subcategory6": "Box para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1896,8 +1708,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Carrinhos organizadores",
-        "kit_name": false
+        "subcategory6": "Carrinhos organizadores"
     },
     {
         "category": "Merchandising",
@@ -1906,8 +1717,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Cortinas para box",
-        "kit_name": false
+        "subcategory6": "Cortinas para box"
     },
     {
         "category": "Merchandising",
@@ -1916,8 +1726,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Cuba para banheiro",
-        "kit_name": false
+        "subcategory6": "Cuba para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1926,8 +1735,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Dispenser para papel e sabonete",
-        "kit_name": false
+        "subcategory6": "Dispenser para papel e sabonete"
     },
     {
         "category": "Merchandising",
@@ -1936,8 +1744,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Espelheiras para banheiro",
-        "kit_name": false
+        "subcategory6": "Espelheiras para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1946,8 +1753,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Espelhos para bancada",
-        "kit_name": false
+        "subcategory6": "Espelhos para bancada"
     },
     {
         "category": "Merchandising",
@@ -1956,8 +1762,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Espelhos para banheiro",
-        "kit_name": false
+        "subcategory6": "Espelhos para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1966,8 +1771,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Kit acessórios para parede de banheiro",
-        "kit_name": false
+        "subcategory6": "Kit acessórios para parede de banheiro"
     },
     {
         "category": "Merchandising",
@@ -1976,8 +1780,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Kit de gabinetes para banheiro",
-        "kit_name": false
+        "subcategory6": "Kit de gabinetes para banheiro"
     },
     {
         "category": "Merchandising",
@@ -1986,8 +1789,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Lavatórios e Mictórios",
-        "kit_name": false
+        "subcategory6": "Lavatórios e Mictórios"
     },
     {
         "category": "Merchandising",
@@ -1996,8 +1798,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Lixeiras para banheiro",
-        "kit_name": false
+        "subcategory6": "Lixeiras para banheiro"
     },
     {
         "category": "Merchandising",
@@ -2006,8 +1807,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Móveis para banheiro",
-        "kit_name": false
+        "subcategory6": "Móveis para banheiro"
     },
     {
         "category": "Merchandising",
@@ -2016,8 +1816,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Porta-papel higiênico de chão",
-        "kit_name": false
+        "subcategory6": "Porta-papel higiênico de chão"
     },
     {
         "category": "Merchandising",
@@ -2026,8 +1825,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Kit acessórios para parede de banheiro",
-        "kit_name": false
+        "subcategory6": "Kit acessórios para parede de banheiro"
     },
     {
         "category": "Merchandising",
@@ -2036,8 +1834,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Porta-shampoo ",
-        "kit_name": false
+        "subcategory6": "Porta-shampoo "
     },
     {
         "category": "Merchandising",
@@ -2046,8 +1843,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Porta-toalhas para bancada",
-        "kit_name": false
+        "subcategory6": "Porta-toalhas para bancada"
     },
     {
         "category": "Merchandising",
@@ -2056,8 +1852,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Prateleira de Vidro",
-        "kit_name": false
+        "subcategory6": "Prateleira de Vidro"
     },
     {
         "category": "Merchandising",
@@ -2066,8 +1861,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Tampos para banheiro",
-        "kit_name": false
+        "subcategory6": "Tampos para banheiro"
     },
     {
         "category": "Merchandising",
@@ -2076,8 +1870,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Tapetes para banheiro",
-        "kit_name": false
+        "subcategory6": "Tapetes para banheiro"
     },
     {
         "category": "Merchandising",
@@ -2086,8 +1879,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Toalhas",
-        "kit_name": false
+        "subcategory6": "Toalhas"
     },
     {
         "category": "Merchandising",
@@ -2096,8 +1888,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Toalheiros térmicos",
-        "kit_name": false
+        "subcategory6": "Toalheiros térmicos"
     },
     {
         "category": "Merchandising",
@@ -2106,8 +1897,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "07. Banheiros",
-        "subcategory6": "Vasos sanitários",
-        "kit_name": false
+        "subcategory6": "Vasos sanitários"
     },
     {
         "category": "Merchandising",
@@ -2116,8 +1906,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Acabamentos para registro",
-        "kit_name": false
+        "subcategory6": "Acabamentos para registro"
     },
     {
         "category": "Merchandising",
@@ -2126,8 +1915,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Acessórios para aquecedor de água a gás",
-        "kit_name": false
+        "subcategory6": "Acessórios para aquecedor de água a gás"
     },
     {
         "category": "Merchandising",
@@ -2136,8 +1924,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Acessórios para gás de cozinha",
-        "kit_name": false
+        "subcategory6": "Acessórios para gás de cozinha"
     },
     {
         "category": "Merchandising",
@@ -2146,8 +1933,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Aquecedor solar",
-        "kit_name": false
+        "subcategory6": "Aquecedor solar"
     },
     {
         "category": "Merchandising",
@@ -2156,8 +1942,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Aquecedores de água a gás",
-        "kit_name": false
+        "subcategory6": "Aquecedores de água a gás"
     },
     {
         "category": "Merchandising",
@@ -2166,8 +1951,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Aquecedores de água elétricos",
-        "kit_name": false
+        "subcategory6": "Aquecedores de água elétricos"
     },
     {
         "category": "Merchandising",
@@ -2176,8 +1960,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Bases para registros",
-        "kit_name": false
+        "subcategory6": "Bases para registros"
     },
     {
         "category": "Merchandising",
@@ -2186,8 +1969,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Caixas sifonadas",
-        "kit_name": false
+        "subcategory6": "Caixas sifonadas"
     },
     {
         "category": "Merchandising",
@@ -2196,8 +1978,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Canos de esgoto",
-        "kit_name": false
+        "subcategory6": "Canos de esgoto"
     },
     {
         "category": "Merchandising",
@@ -2206,8 +1987,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Canos para água fria",
-        "kit_name": false
+        "subcategory6": "Canos para água fria"
     },
     {
         "category": "Merchandising",
@@ -2216,8 +1996,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Canos para água quente",
-        "kit_name": false
+        "subcategory6": "Canos para água quente"
     },
     {
         "category": "Merchandising",
@@ -2226,8 +2005,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Chuveiros elétricos",
-        "kit_name": false
+        "subcategory6": "Chuveiros elétricos"
     },
     {
         "category": "Merchandising",
@@ -2236,8 +2014,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Coordenados",
-        "kit_name": false
+        "subcategory6": "Coordenados"
     },
     {
         "category": "Merchandising",
@@ -2246,8 +2023,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Duchas com coluna",
-        "kit_name": false
+        "subcategory6": "Duchas com coluna"
     },
     {
         "category": "Merchandising",
@@ -2256,8 +2032,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Duchas frias",
-        "kit_name": false
+        "subcategory6": "Duchas frias"
     },
     {
         "category": "Merchandising",
@@ -2266,8 +2041,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Duchas higiênicas",
-        "kit_name": false
+        "subcategory6": "Duchas higiênicas"
     },
     {
         "category": "Merchandising",
@@ -2276,8 +2050,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Hidraulica acabamento",
-        "kit_name": false
+        "subcategory6": "Hidraulica acabamento"
     },
     {
         "category": "Merchandising",
@@ -2286,8 +2059,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Hidromassagem vertical",
-        "kit_name": false
+        "subcategory6": "Hidromassagem vertical"
     },
     {
         "category": "Merchandising",
@@ -2296,8 +2068,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Kit de instalação para vaso sanitário",
-        "kit_name": false
+        "subcategory6": "Kit de instalação para vaso sanitário"
     },
     {
         "category": "Merchandising",
@@ -2306,8 +2077,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Mecanismos e válvulas de descarga",
-        "kit_name": false
+        "subcategory6": "Mecanismos e válvulas de descarga"
     },
     {
         "category": "Merchandising",
@@ -2316,8 +2086,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Misturadores e monocomando para duchas",
-        "kit_name": false
+        "subcategory6": "Misturadores e monocomando para duchas"
     },
     {
         "category": "Merchandising",
@@ -2326,8 +2095,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Pressurizadores",
-        "kit_name": false
+        "subcategory6": "Pressurizadores"
     },
     {
         "category": "Merchandising",
@@ -2336,8 +2104,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Ralos",
-        "kit_name": false
+        "subcategory6": "Ralos"
     },
     {
         "category": "Merchandising",
@@ -2346,8 +2113,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Reparos para hidraulica",
-        "kit_name": false
+        "subcategory6": "Reparos para hidraulica"
     },
     {
         "category": "Merchandising",
@@ -2356,8 +2122,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Torneira boia",
-        "kit_name": false
+        "subcategory6": "Torneira boia"
     },
     {
         "category": "Merchandising",
@@ -2366,8 +2131,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Torneiras para área de serviço e jardim",
-        "kit_name": false
+        "subcategory6": "Torneiras para área de serviço e jardim"
     },
     {
         "category": "Merchandising",
@@ -2376,8 +2140,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Torneiras para banheiro",
-        "kit_name": false
+        "subcategory6": "Torneiras para banheiro"
     },
     {
         "category": "Merchandising",
@@ -2386,8 +2149,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "08. Materiais hidráulicos",
-        "subcategory6": "Torneiras para cozinha",
-        "kit_name": false
+        "subcategory6": "Torneiras para cozinha"
     },
     {
         "category": "Merchandising",
@@ -2396,8 +2158,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Almofadas",
-        "kit_name": false
+        "subcategory6": "Almofadas"
     },
     {
         "category": "Merchandising",
@@ -2406,8 +2167,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Bombas d'água",
-        "kit_name": false
+        "subcategory6": "Bombas d'água"
     },
     {
         "category": "Merchandising",
@@ -2416,8 +2176,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Cercados e Ocultação",
-        "kit_name": false
+        "subcategory6": "Cercados e Ocultação"
     },
     {
         "category": "Merchandising",
@@ -2426,8 +2185,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Churrasqueiras",
-        "kit_name": false
+        "subcategory6": "Churrasqueiras"
     },
     {
         "category": "Merchandising",
@@ -2436,8 +2194,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Decks",
-        "kit_name": false
+        "subcategory6": "Decks"
     },
     {
         "category": "Merchandising",
@@ -2446,8 +2203,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Ferramentas manuais",
-        "kit_name": false
+        "subcategory6": "Ferramentas manuais"
     },
     {
         "category": "Merchandising",
@@ -2456,8 +2212,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Grama Sintética",
-        "kit_name": false
+        "subcategory6": "Grama Sintética"
     },
     {
         "category": "Merchandising",
@@ -2466,8 +2221,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Irrigação",
-        "kit_name": false
+        "subcategory6": "Irrigação"
     },
     {
         "category": "Merchandising",
@@ -2476,8 +2230,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Jardim vertical",
-        "kit_name": false
+        "subcategory6": "Jardim vertical"
     },
     {
         "category": "Merchandising",
@@ -2486,8 +2239,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Lavadoras de alta pressão",
-        "kit_name": false
+        "subcategory6": "Lavadoras de alta pressão"
     },
     {
         "category": "Merchandising",
@@ -2496,8 +2248,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Motorizados Outono-inverno",
-        "kit_name": false
+        "subcategory6": "Motorizados Outono-inverno"
     },
     {
         "category": "Merchandising",
@@ -2506,8 +2257,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Motorizados primavera-verão",
-        "kit_name": false
+        "subcategory6": "Motorizados primavera-verão"
     },
     {
         "category": "Merchandising",
@@ -2516,8 +2266,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Móveis de Jardim",
-        "kit_name": false
+        "subcategory6": "Móveis de Jardim"
     },
     {
         "category": "Merchandising",
@@ -2526,8 +2275,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Ombrelones e gazebos",
-        "kit_name": false
+        "subcategory6": "Ombrelones e gazebos"
     },
     {
         "category": "Merchandising",
@@ -2536,8 +2284,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Organização de Jardim",
-        "kit_name": false
+        "subcategory6": "Organização de Jardim"
     },
     {
         "category": "Merchandising",
@@ -2546,8 +2293,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Piscinas",
-        "kit_name": false
+        "subcategory6": "Piscinas"
     },
     {
         "category": "Merchandising",
@@ -2556,8 +2302,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Plantas",
-        "kit_name": false
+        "subcategory6": "Plantas"
     },
     {
         "category": "Merchandising",
@@ -2566,8 +2311,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Plantas permanentes",
-        "kit_name": false
+        "subcategory6": "Plantas permanentes"
     },
     {
         "category": "Merchandising",
@@ -2576,8 +2320,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Produtos para Jardim",
-        "kit_name": false
+        "subcategory6": "Produtos para Jardim"
     },
     {
         "category": "Merchandising",
@@ -2586,8 +2329,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "09. Jardim",
-        "subcategory6": "Vasos",
-        "kit_name": false
+        "subcategory6": "Vasos"
     },
     {
         "category": "Merchandising",
@@ -2596,8 +2338,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": " Cabos de aço e acessórios",
-        "kit_name": false
+        "subcategory6": " Cabos de aço e acessórios"
     },
     {
         "category": "Merchandising",
@@ -2606,8 +2347,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": " Fechaduras de alta segurança",
-        "kit_name": false
+        "subcategory6": " Fechaduras de alta segurança"
     },
     {
         "category": "Merchandising",
@@ -2616,8 +2356,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": " Vedação para porta e fresta",
-        "kit_name": false
+        "subcategory6": " Vedação para porta e fresta"
     },
     {
         "category": "Merchandising",
@@ -2626,8 +2365,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Abraçadeiras metalicas",
-        "kit_name": false
+        "subcategory6": "Abraçadeiras metalicas"
     },
     {
         "category": "Merchandising",
@@ -2636,8 +2374,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Artigos de mudança",
-        "kit_name": false
+        "subcategory6": "Artigos de mudança"
     },
     {
         "category": "Merchandising",
@@ -2646,8 +2383,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Banquetas domésticas Escadas",
-        "kit_name": false
+        "subcategory6": "Banquetas domésticas Escadas"
     },
     {
         "category": "Merchandising",
@@ -2656,8 +2392,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Cadeados e porta etiquetas",
-        "kit_name": false
+        "subcategory6": "Cadeados e porta etiquetas"
     },
     {
         "category": "Merchandising",
@@ -2666,8 +2401,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Caixas de correio",
-        "kit_name": false
+        "subcategory6": "Caixas de correio"
     },
     {
         "category": "Merchandising",
@@ -2676,8 +2410,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Carrinhos de carga",
-        "kit_name": false
+        "subcategory6": "Carrinhos de carga"
     },
     {
         "category": "Merchandising",
@@ -2686,8 +2419,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Cavaletes",
-        "kit_name": false
+        "subcategory6": "Cavaletes"
     },
     {
         "category": "Merchandising",
@@ -2696,8 +2428,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Cofres",
-        "kit_name": false
+        "subcategory6": "Cofres"
     },
     {
         "category": "Merchandising",
@@ -2706,8 +2437,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Cordas, cintas e cordões",
-        "kit_name": false
+        "subcategory6": "Cordas, cintas e cordões"
     },
     {
         "category": "Merchandising",
@@ -2716,8 +2446,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Corrediças para móveis",
-        "kit_name": false
+        "subcategory6": "Corrediças para móveis"
     },
     {
         "category": "Merchandising",
@@ -2726,8 +2455,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Correntes e fechos de contato",
-        "kit_name": false
+        "subcategory6": "Correntes e fechos de contato"
     },
     {
         "category": "Merchandising",
@@ -2736,8 +2464,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Dobradiças para móveis",
-        "kit_name": false
+        "subcategory6": "Dobradiças para móveis"
     },
     {
         "category": "Merchandising",
@@ -2746,8 +2473,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Espelhos de segurança",
-        "kit_name": false
+        "subcategory6": "Espelhos de segurança"
     },
     {
         "category": "Merchandising",
@@ -2756,8 +2482,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Estrados",
-        "kit_name": false
+        "subcategory6": "Estrados"
     },
     {
         "category": "Merchandising",
@@ -2766,8 +2491,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Fechaduras",
-        "kit_name": false
+        "subcategory6": "Fechaduras"
     },
     {
         "category": "Merchandising",
@@ -2776,8 +2500,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Feltros",
-        "kit_name": false
+        "subcategory6": "Feltros"
     },
     {
         "category": "Merchandising",
@@ -2786,8 +2509,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Feltros e Antideslizantes para móveis",
-        "kit_name": false
+        "subcategory6": "Feltros e Antideslizantes para móveis"
     },
     {
         "category": "Merchandising",
@@ -2796,8 +2518,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ferragens para janelas",
-        "kit_name": false
+        "subcategory6": "Ferragens para janelas"
     },
     {
         "category": "Merchandising",
@@ -2806,8 +2527,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ferragens para móveis",
-        "kit_name": false
+        "subcategory6": "Ferragens para móveis"
     },
     {
         "category": "Merchandising",
@@ -2816,8 +2536,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ferragens para portas",
-        "kit_name": false
+        "subcategory6": "Ferragens para portas"
     },
     {
         "category": "Merchandising",
@@ -2826,8 +2545,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Fixação",
-        "kit_name": false
+        "subcategory6": "Fixação"
     },
     {
         "category": "Merchandising",
@@ -2836,8 +2554,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ganchos adesivos",
-        "kit_name": false
+        "subcategory6": "Ganchos adesivos"
     },
     {
         "category": "Merchandising",
@@ -2846,8 +2563,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ganchos de parafusar",
-        "kit_name": false
+        "subcategory6": "Ganchos de parafusar"
     },
     {
         "category": "Merchandising",
@@ -2856,8 +2572,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ganchos de rede",
-        "kit_name": false
+        "subcategory6": "Ganchos de rede"
     },
     {
         "category": "Merchandising",
@@ -2866,8 +2581,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Ganhos e suportes colantes",
-        "kit_name": false
+        "subcategory6": "Ganhos e suportes colantes"
     },
     {
         "category": "Merchandising",
@@ -2876,8 +2590,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Letras e Números",
-        "kit_name": false
+        "subcategory6": "Letras e Números"
     },
     {
         "category": "Merchandising",
@@ -2886,8 +2599,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Perfil para bricolagem",
-        "kit_name": false
+        "subcategory6": "Perfil para bricolagem"
     },
     {
         "category": "Merchandising",
@@ -2896,8 +2608,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Pés para móveis e mesas",
-        "kit_name": false
+        "subcategory6": "Pés para móveis e mesas"
     },
     {
         "category": "Merchandising",
@@ -2906,8 +2617,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Placas de sinalização",
-        "kit_name": false
+        "subcategory6": "Placas de sinalização"
     },
     {
         "category": "Merchandising",
@@ -2916,8 +2626,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Proteção infantil",
-        "kit_name": false
+        "subcategory6": "Proteção infantil"
     },
     {
         "category": "Merchandising",
@@ -2926,8 +2635,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Proteção para garagem",
-        "kit_name": false
+        "subcategory6": "Proteção para garagem"
     },
     {
         "category": "Merchandising",
@@ -2936,8 +2644,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Puxadores para porta",
-        "kit_name": false
+        "subcategory6": "Puxadores para porta"
     },
     {
         "category": "Merchandising",
@@ -2946,8 +2653,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "10. Ferragens",
-        "subcategory6": "Rodízios e suportes rodantes",
-        "kit_name": false
+        "subcategory6": "Rodízios e suportes rodantes"
     },
     {
         "category": "Merchandising",
@@ -2956,8 +2662,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Colas",
-        "kit_name": false
+        "subcategory6": "Colas"
     },
     {
         "category": "Merchandising",
@@ -2966,8 +2671,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Efeitos",
-        "kit_name": false
+        "subcategory6": "Efeitos"
     },
     {
         "category": "Merchandising",
@@ -2976,8 +2680,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Esmaltes e Solventes",
-        "kit_name": false
+        "subcategory6": "Esmaltes e Solventes"
     },
     {
         "category": "Merchandising",
@@ -2986,8 +2689,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Espumas",
-        "kit_name": false
+        "subcategory6": "Espumas"
     },
     {
         "category": "Merchandising",
@@ -2996,8 +2698,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Fábrica de Cores",
-        "kit_name": false
+        "subcategory6": "Fábrica de Cores"
     },
     {
         "category": "Merchandising",
@@ -3006,8 +2707,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Ferramentas de Limpeza",
-        "kit_name": false
+        "subcategory6": "Ferramentas de Limpeza"
     },
     {
         "category": "Merchandising",
@@ -3016,8 +2716,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Fitas adesivas",
-        "kit_name": false
+        "subcategory6": "Fitas adesivas"
     },
     {
         "category": "Merchandising",
@@ -3026,8 +2725,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Lixas",
-        "kit_name": false
+        "subcategory6": "Lixas"
     },
     {
         "category": "Merchandising",
@@ -3036,8 +2734,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Pincéis e Rolos",
-        "kit_name": false
+        "subcategory6": "Pincéis e Rolos"
     },
     {
         "category": "Merchandising",
@@ -3046,8 +2743,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Preparação de superfícies",
-        "kit_name": false
+        "subcategory6": "Preparação de superfícies"
     },
     {
         "category": "Merchandising",
@@ -3056,8 +2752,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Produtos de limpeza",
-        "kit_name": false
+        "subcategory6": "Produtos de limpeza"
     },
     {
         "category": "Merchandising",
@@ -3066,8 +2761,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Proteção",
-        "kit_name": false
+        "subcategory6": "Proteção"
     },
     {
         "category": "Merchandising",
@@ -3076,8 +2770,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Selantes e Silicones",
-        "kit_name": false
+        "subcategory6": "Selantes e Silicones"
     },
     {
         "category": "Merchandising",
@@ -3086,8 +2779,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Spray e Decoração de Móvel",
-        "kit_name": false
+        "subcategory6": "Spray e Decoração de Móvel"
     },
     {
         "category": "Merchandising",
@@ -3096,8 +2788,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Texturas",
-        "kit_name": false
+        "subcategory6": "Texturas"
     },
     {
         "category": "Merchandising",
@@ -3106,8 +2797,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tinta Epóxi",
-        "kit_name": false
+        "subcategory6": "Tinta Epóxi"
     },
     {
         "category": "Merchandising",
@@ -3116,8 +2806,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tinta Exterior",
-        "kit_name": false
+        "subcategory6": "Tinta Exterior"
     },
     {
         "category": "Merchandising",
@@ -3126,8 +2815,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tinta Interior Grandes Formatos",
-        "kit_name": false
+        "subcategory6": "Tinta Interior Grandes Formatos"
     },
     {
         "category": "Merchandising",
@@ -3136,8 +2824,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tinta Interior Pequenos Formatos",
-        "kit_name": false
+        "subcategory6": "Tinta Interior Pequenos Formatos"
     },
     {
         "category": "Merchandising",
@@ -3146,8 +2833,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tinta para piso",
-        "kit_name": false
+        "subcategory6": "Tinta para piso"
     },
     {
         "category": "Merchandising",
@@ -3156,8 +2842,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Tintas e Resinas Impermeabilizantes",
-        "kit_name": false
+        "subcategory6": "Tintas e Resinas Impermeabilizantes"
     },
     {
         "category": "Merchandising",
@@ -3166,8 +2851,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "11. Tintas",
-        "subcategory6": "Verniz e Stain",
-        "kit_name": false
+        "subcategory6": "Verniz e Stain"
     },
     {
         "category": "Merchandising",
@@ -3176,8 +2860,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": " Cortina de cozinha",
-        "kit_name": false
+        "subcategory6": " Cortina de cozinha"
     },
     {
         "category": "Merchandising",
@@ -3186,8 +2869,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": " Espaço projeto",
-        "kit_name": false
+        "subcategory6": " Espaço projeto"
     },
     {
         "category": "Merchandising",
@@ -3196,8 +2878,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": " Outros revestimentos de parede (Adesivos)",
-        "kit_name": false
+        "subcategory6": " Outros revestimentos de parede (Adesivos)"
     },
     {
         "category": "Merchandising",
@@ -3206,8 +2887,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Almofada",
-        "kit_name": false
+        "subcategory6": "Almofada"
     },
     {
         "category": "Merchandising",
@@ -3216,8 +2896,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Assento",
-        "kit_name": false
+        "subcategory6": "Assento"
     },
     {
         "category": "Merchandising",
@@ -3226,8 +2905,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Cama",
-        "kit_name": false
+        "subcategory6": "Cama"
     },
     {
         "category": "Merchandising",
@@ -3236,8 +2914,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Capachos",
-        "kit_name": false
+        "subcategory6": "Capachos"
     },
     {
         "category": "Merchandising",
@@ -3246,8 +2923,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Capas de almofada",
-        "kit_name": false
+        "subcategory6": "Capas de almofada"
     },
     {
         "category": "Merchandising",
@@ -3256,8 +2932,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Cortinas",
-        "kit_name": false
+        "subcategory6": "Cortinas"
     },
     {
         "category": "Merchandising",
@@ -3266,8 +2941,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Espelhos",
-        "kit_name": false
+        "subcategory6": "Espelhos"
     },
     {
         "category": "Merchandising",
@@ -3276,8 +2950,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Flâmulas e placas",
-        "kit_name": false
+        "subcategory6": "Flâmulas e placas"
     },
     {
         "category": "Merchandising",
@@ -3286,8 +2959,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Futon",
-        "kit_name": false
+        "subcategory6": "Futon"
     },
     {
         "category": "Merchandising",
@@ -3296,8 +2968,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Jogos Americanos",
-        "kit_name": false
+        "subcategory6": "Jogos Americanos"
     },
     {
         "category": "Merchandising",
@@ -3306,8 +2977,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Mantas",
-        "kit_name": false
+        "subcategory6": "Mantas"
     },
     {
         "category": "Merchandising",
@@ -3316,8 +2986,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Moldura de teto e parede",
-        "kit_name": false
+        "subcategory6": "Moldura de teto e parede"
     },
     {
         "category": "Merchandising",
@@ -3326,8 +2995,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Moldura Pronta",
-        "kit_name": false
+        "subcategory6": "Moldura Pronta"
     },
     {
         "category": "Merchandising",
@@ -3336,8 +3004,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Moldura sob encomenda",
-        "kit_name": false
+        "subcategory6": "Moldura sob encomenda"
     },
     {
         "category": "Merchandising",
@@ -3346,8 +3013,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Objetos decorativos por impulso (velas e aromas)",
-        "kit_name": false
+        "subcategory6": "Objetos decorativos por impulso (velas e aromas)"
     },
     {
         "category": "Merchandising",
@@ -3356,8 +3022,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Painel multifoto",
-        "kit_name": false
+        "subcategory6": "Painel multifoto"
     },
     {
         "category": "Merchandising",
@@ -3366,8 +3031,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Papel de parede",
-        "kit_name": false
+        "subcategory6": "Papel de parede"
     },
     {
         "category": "Merchandising",
@@ -3376,8 +3040,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Passadeira ao metro",
-        "kit_name": false
+        "subcategory6": "Passadeira ao metro"
     },
     {
         "category": "Merchandising",
@@ -3386,8 +3049,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Passadeiras prontas",
-        "kit_name": false
+        "subcategory6": "Passadeiras prontas"
     },
     {
         "category": "Merchandising",
@@ -3396,8 +3058,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Passamanaria",
-        "kit_name": false
+        "subcategory6": "Passamanaria"
     },
     {
         "category": "Merchandising",
@@ -3406,8 +3067,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Persianas",
-        "kit_name": false
+        "subcategory6": "Persianas"
     },
     {
         "category": "Merchandising",
@@ -3416,8 +3076,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Porta retratos",
-        "kit_name": false
+        "subcategory6": "Porta retratos"
     },
     {
         "category": "Merchandising",
@@ -3426,8 +3085,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Quadros",
-        "kit_name": false
+        "subcategory6": "Quadros"
     },
     {
         "category": "Merchandising",
@@ -3436,8 +3094,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Quadros multiuso",
-        "kit_name": false
+        "subcategory6": "Quadros multiuso"
     },
     {
         "category": "Merchandising",
@@ -3446,8 +3103,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Relógios",
-        "kit_name": false
+        "subcategory6": "Relógios"
     },
     {
         "category": "Merchandising",
@@ -3456,8 +3112,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Tapete Infantil",
-        "kit_name": false
+        "subcategory6": "Tapete Infantil"
     },
     {
         "category": "Merchandising",
@@ -3466,8 +3121,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Tapete Tatame",
-        "kit_name": false
+        "subcategory6": "Tapete Tatame"
     },
     {
         "category": "Merchandising",
@@ -3476,8 +3130,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Tapetes",
-        "kit_name": false
+        "subcategory6": "Tapetes"
     },
     {
         "category": "Merchandising",
@@ -3486,8 +3139,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Tapetinhos",
-        "kit_name": false
+        "subcategory6": "Tapetinhos"
     },
     {
         "category": "Merchandising",
@@ -3496,8 +3148,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Tatame",
-        "kit_name": false
+        "subcategory6": "Tatame"
     },
     {
         "category": "Merchandising",
@@ -3506,8 +3157,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Toalha de Mesa",
-        "kit_name": false
+        "subcategory6": "Toalha de Mesa"
     },
     {
         "category": "Merchandising",
@@ -3516,8 +3166,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Varões, trilhos e acessórios",
-        "kit_name": false
+        "subcategory6": "Varões, trilhos e acessórios"
     },
     {
         "category": "Merchandising",
@@ -3526,8 +3175,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "12. Decoração e tapetes",
-        "subcategory6": "Yoga",
-        "kit_name": false
+        "subcategory6": "Yoga"
     },
     {
         "category": "Merchandising",
@@ -3536,8 +3184,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": " Luz noturna/Cordão de luz",
-        "kit_name": false
+        "subcategory6": " Luz noturna/Cordão de luz"
     },
     {
         "category": "Merchandising",
@@ -3546,8 +3193,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Abajur/Luminárias de mesa",
-        "kit_name": false
+        "subcategory6": "Abajur/Luminárias de mesa"
     },
     {
         "category": "Merchandising",
@@ -3556,8 +3202,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Arandelas",
-        "kit_name": false
+        "subcategory6": "Arandelas"
     },
     {
         "category": "Merchandising",
@@ -3566,8 +3211,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Base",
-        "kit_name": false
+        "subcategory6": "Base"
     },
     {
         "category": "Merchandising",
@@ -3576,8 +3220,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Cúpulas",
-        "kit_name": false
+        "subcategory6": "Cúpulas"
     },
     {
         "category": "Merchandising",
@@ -3586,8 +3229,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Fitas e mangueiras LED",
-        "kit_name": false
+        "subcategory6": "Fitas e mangueiras LED"
     },
     {
         "category": "Merchandising",
@@ -3596,8 +3238,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Iluminação externa",
-        "kit_name": false
+        "subcategory6": "Iluminação externa"
     },
     {
         "category": "Merchandising",
@@ -3606,8 +3247,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Lâmpadas",
-        "kit_name": false
+        "subcategory6": "Lâmpadas"
     },
     {
         "category": "Merchandising",
@@ -3616,8 +3256,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Luminárias de chão",
-        "kit_name": false
+        "subcategory6": "Luminárias de chão"
     },
     {
         "category": "Merchandising",
@@ -3626,8 +3265,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Luminárias de teto",
-        "kit_name": false
+        "subcategory6": "Luminárias de teto"
     },
     {
         "category": "Merchandising",
@@ -3636,8 +3274,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Lustres e pendentes",
-        "kit_name": false
+        "subcategory6": "Lustres e pendentes"
     },
     {
         "category": "Merchandising",
@@ -3646,8 +3283,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Painéis de grandes formatos",
-        "kit_name": false
+        "subcategory6": "Painéis de grandes formatos"
     },
     {
         "category": "Merchandising",
@@ -3656,8 +3292,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Painel LED",
-        "kit_name": false
+        "subcategory6": "Painel LED"
     },
     {
         "category": "Merchandising",
@@ -3666,8 +3301,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Perfis de LED e Luminárias de móveis",
-        "kit_name": false
+        "subcategory6": "Perfis de LED e Luminárias de móveis"
     },
     {
         "category": "Merchandising",
@@ -3676,8 +3310,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Plafonier",
-        "kit_name": false
+        "subcategory6": "Plafonier"
     },
     {
         "category": "Merchandising",
@@ -3686,8 +3319,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Plafons",
-        "kit_name": false
+        "subcategory6": "Plafons"
     },
     {
         "category": "Merchandising",
@@ -3696,8 +3328,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Spot de embutir",
-        "kit_name": false
+        "subcategory6": "Spot de embutir"
     },
     {
         "category": "Merchandising",
@@ -3706,8 +3337,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Spot de sobrepor decorativo",
-        "kit_name": false
+        "subcategory6": "Spot de sobrepor decorativo"
     },
     {
         "category": "Merchandising",
@@ -3716,8 +3346,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Trilhos de spot",
-        "kit_name": false
+        "subcategory6": "Trilhos de spot"
     },
     {
         "category": "Merchandising",
@@ -3726,8 +3355,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "13. Iluminação",
-        "subcategory6": "Ventiladores",
-        "kit_name": false
+        "subcategory6": "Ventiladores"
     },
     {
         "category": "Merchandising",
@@ -3736,8 +3364,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Araras de roupas",
-        "kit_name": false
+        "subcategory6": "Araras de roupas"
     },
     {
         "category": "Merchandising",
@@ -3746,8 +3373,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Cabides",
-        "kit_name": false
+        "subcategory6": "Cabides"
     },
     {
         "category": "Merchandising",
@@ -3756,8 +3382,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Caixas organizadoras",
-        "kit_name": false
+        "subcategory6": "Caixas organizadoras"
     },
     {
         "category": "Merchandising",
@@ -3766,8 +3391,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Cestaria",
-        "kit_name": false
+        "subcategory6": "Cestaria"
     },
     {
         "category": "Merchandising",
@@ -3776,8 +3400,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Closets",
-        "kit_name": false
+        "subcategory6": "Closets"
     },
     {
         "category": "Merchandising",
@@ -3786,8 +3409,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Estantes",
-        "kit_name": false
+        "subcategory6": "Estantes"
     },
     {
         "category": "Merchandising",
@@ -3796,8 +3418,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Gaveteiros",
-        "kit_name": false
+        "subcategory6": "Gaveteiros"
     },
     {
         "category": "Merchandising",
@@ -3806,8 +3427,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Mesas de escritório",
-        "kit_name": false
+        "subcategory6": "Mesas de escritório"
     },
     {
         "category": "Merchandising",
@@ -3816,8 +3436,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Organizadores de closet",
-        "kit_name": false
+        "subcategory6": "Organizadores de closet"
     },
     {
         "category": "Merchandising",
@@ -3826,8 +3445,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Organizadores de escritório",
-        "kit_name": false
+        "subcategory6": "Organizadores de escritório"
     },
     {
         "category": "Merchandising",
@@ -3836,8 +3454,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Prateleiras e nichos",
-        "kit_name": false
+        "subcategory6": "Prateleiras e nichos"
     },
     {
         "category": "Merchandising",
@@ -3846,8 +3463,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Sapateiras",
-        "kit_name": false
+        "subcategory6": "Sapateiras"
     },
     {
         "category": "Merchandising",
@@ -3856,8 +3472,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Spaceo Kub",
-        "kit_name": false
+        "subcategory6": "Spaceo Kub"
     },
     {
         "category": "Merchandising",
@@ -3866,8 +3481,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "14. Organização",
-        "subcategory6": "Trilhos, suportes e prateleiras",
-        "kit_name": false
+        "subcategory6": "Trilhos, suportes e prateleiras"
     },
     {
         "category": "Merchandising",
@@ -3876,8 +3490,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Acessórios para filtro",
-        "kit_name": false
+        "subcategory6": "Acessórios para filtro"
     },
     {
         "category": "Merchandising",
@@ -3886,8 +3499,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Bebedouros de água",
-        "kit_name": false
+        "subcategory6": "Bebedouros de água"
     },
     {
         "category": "Merchandising",
@@ -3896,8 +3508,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Cestos de roupas; Acessórios para área de serviço",
-        "kit_name": false
+        "subcategory6": "Cestos de roupas; Acessórios para área de serviço"
     },
     {
         "category": "Merchandising",
@@ -3906,8 +3517,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Cubas para cozinha",
-        "kit_name": false
+        "subcategory6": "Cubas para cozinha"
     },
     {
         "category": "Merchandising",
@@ -3916,8 +3526,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Eletrodomésticos",
-        "kit_name": false
+        "subcategory6": "Eletrodomésticos"
     },
     {
         "category": "Merchandising",
@@ -3926,8 +3535,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Filtros de água",
-        "kit_name": false
+        "subcategory6": "Filtros de água"
     },
     {
         "category": "Merchandising",
@@ -3936,8 +3544,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Filtros de coluna",
-        "kit_name": false
+        "subcategory6": "Filtros de coluna"
     },
     {
         "category": "Merchandising",
@@ -3946,8 +3553,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Gabinetes de cozinha",
-        "kit_name": false
+        "subcategory6": "Gabinetes de cozinha"
     },
     {
         "category": "Merchandising",
@@ -3956,8 +3562,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Lixeiras",
-        "kit_name": false
+        "subcategory6": "Lixeiras"
     },
     {
         "category": "Merchandising",
@@ -3966,8 +3571,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Móveis de lavanderia",
-        "kit_name": false
+        "subcategory6": "Móveis de lavanderia"
     },
     {
         "category": "Merchandising",
@@ -3976,8 +3580,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Móveis modulares de cozinha",
-        "kit_name": false
+        "subcategory6": "Móveis modulares de cozinha"
     },
     {
         "category": "Merchandising",
@@ -3986,8 +3589,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Organizadores de Cozinha",
-        "kit_name": false
+        "subcategory6": "Organizadores de Cozinha"
     },
     {
         "category": "Merchandising",
@@ -3996,8 +3598,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Pias de cozinha",
-        "kit_name": false
+        "subcategory6": "Pias de cozinha"
     },
     {
         "category": "Merchandising",
@@ -4006,8 +3607,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Purificadores de água",
-        "kit_name": false
+        "subcategory6": "Purificadores de água"
     },
     {
         "category": "Merchandising",
@@ -4016,8 +3616,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Tábuas de passar",
-        "kit_name": false
+        "subcategory6": "Tábuas de passar"
     },
     {
         "category": "Merchandising",
@@ -4026,8 +3625,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Tampos de cozinha",
-        "kit_name": false
+        "subcategory6": "Tampos de cozinha"
     },
     {
         "category": "Merchandising",
@@ -4036,8 +3634,7 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Tanques",
-        "kit_name": false
+        "subcategory6": "Tanques"
     },
     {
         "category": "Merchandising",
@@ -4046,7 +3643,6 @@
         "subcategory3": "Área de Vendas/Seções",
         "subcategory4": "Micro Merchan",
         "subcategory5": "15. Cozinhas e área de serviço",
-        "subcategory6": "Varais",
-        "kit_name": false
+        "subcategory6": "Varais"
     }
 ]
