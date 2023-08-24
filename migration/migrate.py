@@ -14,6 +14,6 @@ def data_filter(repo):
         logger.info("Creating filters.")
         file = open(file=path, mode="r", encoding="utf-8")
         data = json.load(file)
-        repo.insert_filter(data)
+        repo.insert_filter(value=data)
         logger.info("Filter created successfully.")
         file.close()

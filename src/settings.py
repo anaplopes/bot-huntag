@@ -20,7 +20,9 @@ class Settings(BaseSettings):
     SQL_DATABASE_PORT: str = os.getenv("SQL_DATABASE_PORT", "5432")
     SQL_DATABASE_NAME: str = os.getenv("SQL_DATABASE_NAME", "huntag")
 
-    NOSQL_DATABASE_HOST: str = os.getenv("NOSQL_DATABASE_HOST", "mongodb://127.0.0.1:27017/huntag")
+    NOSQL_DATABASE_HOST: str = os.getenv(
+        "NOSQL_DATABASE_HOST", "mongodb://127.0.0.1:27017/huntag"
+    )
 
     AZURE_APP_CLIENT_ID: str = os.getenv("AZURE_APP_CLIENT_ID")
     AZURE_DIRETORY_TENANT_ID: str = os.getenv("AZURE_DIRETORY_TENANT_ID")

@@ -1,13 +1,18 @@
-from mongoengine import EmbeddedDocument, EmbeddedDocumentField, StringField, DateTimeField, ObjectIdField
-from src.models.nosql.kit import KitModelNoSQL
 from datetime import datetime
+
 from bson import ObjectId
+from mongoengine import (
+    DateTimeField,
+    Document,
+    ObjectIdField,
+    StringField,
+    IntField
+)
 
 
-class ControlModelNoSQL(EmbeddedDocument):
-
-    id = ObjectIdField(db_field="_id", primary_key=True, unique=True, default=ObjectId)
-    kit_id = EmbeddedDocumentField(KitModelNoSQL)
+class ControlModelNoSQL(Document):
+    id = ObjectIdField(db_field="_id", primary_key=True, default=ObjectId)
+    kit_id = IntField(unique=True)
     file_name = StringField(max_length=100)
     action = StringField(max_length=20)
     status = StringField(max_length=20)
@@ -15,7 +20,4 @@ class ControlModelNoSQL(EmbeddedDocument):
     created_at = DateTimeField(default=datetime.utcnow)
     updated_at = DateTimeField(default=datetime.utcnow)
 
-    meta = {
-        "collection": "download_control",
-        "indexes": ["id", "file_name"]
-    }
+    meta = {"collection": "download_control", "indexes": ["file_name"]}

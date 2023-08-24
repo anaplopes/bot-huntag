@@ -1,11 +1,17 @@
-from mongoengine import EmbeddedDocument, StringField, IntField, DateTimeField, ObjectIdField
 from datetime import datetime
+
 from bson import ObjectId
+from mongoengine import (
+    DateTimeField,
+    Document,
+    IntField,
+    ObjectIdField,
+    StringField,
+)
 
 
-class KitModelNoSQL(EmbeddedDocument):
-
-    id = ObjectIdField(db_field="_id", primary_key=True, unique=True, default=ObjectId)
+class KitModelNoSQL(Document):
+    id = ObjectIdField(db_field="_id", primary_key=True, default=ObjectId)
     kit_id = IntField(unique=True)
     kit_name = StringField(max_length=100)
     filter_to_kit = StringField(max_length=500, null=True)
@@ -14,7 +20,4 @@ class KitModelNoSQL(EmbeddedDocument):
     created_at = DateTimeField(default=datetime.utcnow)
     updated_at = DateTimeField(default=datetime.utcnow)
 
-    meta = {
-        "collection": "kits_info",
-        "indexes": ["id", "kit_id", "kit_name"]
-    }
+    meta = {"collection": "kits_info", "indexes": ["kit_id", "kit_name"]}

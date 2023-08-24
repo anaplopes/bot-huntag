@@ -1,20 +1,16 @@
 from logging.config import dictConfig
 
 from migration import migrate
-
-from src.database.connection_sql import ConnectionSQLDatabase
-from src.repository.sql.control import ControlSQLRepository
-from src.repository.sql.filter import FilterSQLRepository
-from src.repository.sql.kit import KitSQLRepository
-
 from src.database.connection_nosql import ConnectionNoSQLDatabase
+from src.database.connection_sql import ConnectionSQLDatabase
 from src.repository.nosql.control import ControlNoSQLRepository
 from src.repository.nosql.filter import FilterNoSQLRepository
 from src.repository.nosql.kit import KitNoSQLRepository
-
+from src.repository.sql.control import ControlSQLRepository
+from src.repository.sql.filter import FilterSQLRepository
+from src.repository.sql.kit import KitSQLRepository
 from src.usecases.robot import Robot
 from src.utils.conflog import ConfLog
-
 
 TYPE_DB = "NoSQL"
 
@@ -26,17 +22,17 @@ if __name__ == "__main__":
     if TYPE_DB == "SQL":
         ConnectionSQLDatabase().create_data_model()
         migrate.data_filter(repo=FilterSQLRepository())
-        bot = Robot(
+        Robot(
             repo_control=ControlSQLRepository(),
             repo_filter=FilterSQLRepository(),
-            repo_kit=KitSQLRepository()
+            repo_kit=KitSQLRepository(),
         ).execute()
 
     if TYPE_DB == "NoSQL":
         ConnectionNoSQLDatabase()
         migrate.data_filter(repo=FilterNoSQLRepository())
-        bot = Robot(
+        Robot(
             repo_control=ControlNoSQLRepository(),
             repo_filter=FilterNoSQLRepository(),
-            repo_kit=KitNoSQLRepository()
+            repo_kit=KitNoSQLRepository(),
         ).execute()

@@ -38,7 +38,9 @@ class FilterSQLRepository:
         logger.info("Data updated successfully.")
         return result.first()
 
-    def toggle_filter(self, _id: str, action: bool) -> Optional[FilterModelSQL]:
+    def toggle_filter(
+        self, _id: str, action: bool
+    ) -> Optional[FilterModelSQL]:
         stmt = (
             update(FilterModelSQL)
             .where(FilterModelSQL.id == _id)
@@ -58,7 +60,9 @@ class FilterSQLRepository:
             stmt = stmt.where(FilterModelSQL.is_active == is_active)
         return self.session.scalars(stmt).first()
 
-    def select_all(self, is_active: bool | None = None) -> List[FilterModelSQL]:
+    def select_all(
+        self, is_active: bool | None = None
+    ) -> List[FilterModelSQL]:
         stmt = select(FilterModelSQL)
         if is_active:
             stmt = stmt.where(FilterModelSQL.is_active == is_active)

@@ -17,6 +17,13 @@ class Login:
             driver.find_element(
                 By.XPATH, '//input[@type="submit"][@value="Login"]'
             ).submit()
+
+            error = driver.execute_script(
+                "return document.querySelectorAll('form ul li')"
+            )
+            if error:
+                raise Exception(error[0].text)
+
             logger.info("Logged.")
 
         except Exception as e:

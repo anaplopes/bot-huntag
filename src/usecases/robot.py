@@ -6,12 +6,10 @@ from math import ceil
 from selenium.webdriver.common.by import By
 
 from src.settings import settings
-
 from src.usecases.driver import Driver
 from src.usecases.filter import Filter
-from src.usecases.login import Login
 from src.usecases.kit import Kit
-
+from src.usecases.login import Login
 from src.utils.conflog import logger
 from src.utils.operating import OperatingSystem
 
@@ -49,6 +47,22 @@ class Robot:
         )
         return list_img_file, list_title_file, list_button_download
 
+    def returning_page(self, driver) -> None:
+        driver.find_element(
+            By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]'
+        ).click()
+
+    def next_page(self, driver) -> None:
+        button = driver.execute_script(
+            "return document.getElementsByClassName('fa fa-chevron-right')"
+        )
+        button[0].click()
+
+    def home_page(self, driver) -> None:
+        driver.find_element(
+            By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
+        ).click()
+
     def download_file(self, button, kit_info: dict, title: str) -> bool:
         value = {
             "kit_id": kit_info["kit_id"],
@@ -69,7 +83,14 @@ class Robot:
             self.repo_control.add_control(value=value)
             return True
 
-    def move_file(self, kit_info: dict, title: str, filename: str, dir_path: str, dir_kit_name: bool) -> None:
+    def move_file(
+        self,
+        kit_info: dict,
+        title: str,
+        filename: str,
+        dir_path: str,
+        dir_kit_name: bool,
+    ) -> None:
         value = {
             "kit_id": kit_info["kit_id"],
             "file_name": title,
@@ -79,9 +100,7 @@ class Robot:
         }
         try:
             dir_source = os.path.join(settings.PATH_DIR_SOURCE, filename)
-            dir_target = os.path.join(
-                settings.PATH_DIR_TARGET, dir_path
-            )
+            dir_target = os.path.join(settings.PATH_DIR_TARGET, dir_path)
             if dir_kit_name:
                 dir_target = os.path.join(
                     settings.PATH_DIR_TARGET, dir_path, kit_info["kit_name"]
@@ -103,9 +122,7 @@ class Robot:
 
     def get_file(self, driver, kit_info: dict, row):
         list_img, list_title, list_button = self.list_files(driver=driver)
-        for image, title, button in zip(
-            list_img, list_title, list_button
-        ):
+        for image, title, button in zip(list_img, list_title, list_button):
             cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
             pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
             src = image.get_attribute("src")
@@ -126,26 +143,12 @@ class Robot:
                         title=title_text,
                         filename=filename,
                         dir_path=os.path.join(
-                            row.subcategory4, row.subcategory5, row.subcategory6
+                            row.subcategory4,
+                            row.subcategory5,
+                            row.subcategory6,
                         ),
                         dir_kit_name=row.dir_kit_name,
                     )
-
-    def returning_page(self, driver) -> None:
-        driver.find_element(
-            By.XPATH, '//div[@id="hbreadcrumb"]/ol/li/a[@href="/"]'
-        ).click()
-
-    def next_page(self, driver) -> None:
-        button = driver.execute_script(
-            "return document.getElementsByClassName('fa fa-chevron-right')"
-        )
-        button[0].click()
-
-    def home_page(self, driver) -> None:
-        driver.find_element(
-            By.XPATH, '//div/ul/li/a[@href="/Home/Gallery"]'
-        ).click()
 
     def execute(self):
         try:

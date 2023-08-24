@@ -26,7 +26,9 @@ class ControlSQLRepository:
         logger.info("Data successfully saved.")
         return model
 
-    def update_control(self, _id: str, value: dict) -> Optional[ControlModelSQL]:
+    def update_control(
+        self, _id: str, value: dict
+    ) -> Optional[ControlModelSQL]:
         stmt = (
             update(ControlModelSQL)
             .where(ControlModelSQL.id == _id)

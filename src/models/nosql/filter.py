@@ -1,11 +1,17 @@
-from mongoengine import EmbeddedDocument, StringField, DateTimeField, BooleanField, ObjectIdField
 from datetime import datetime
+
 from bson import ObjectId
+from mongoengine import (
+    BooleanField,
+    DateTimeField,
+    Document,
+    ObjectIdField,
+    StringField,
+)
 
 
-class FilterModelNoSQL(EmbeddedDocument):
-
-    id = ObjectIdField(db_field="_id", primary_key=True, unique=True, default=ObjectId)
+class FilterModelNoSQL(Document):
+    id = ObjectIdField(db_field="_id", primary_key=True, default=ObjectId)
     category = StringField(max_length=50)
     subcategory1 = StringField(max_length=100)
     subcategory2 = StringField(max_length=100)
@@ -18,7 +24,4 @@ class FilterModelNoSQL(EmbeddedDocument):
     created_at = DateTimeField(default=datetime.utcnow)
     updated_at = DateTimeField(default=datetime.utcnow)
 
-    meta = {
-        "collection": "filters",
-        "indexes": ["id", "is_active", "category"]
-    }
+    meta = {"collection": "filters", "indexes": ["category"]}
