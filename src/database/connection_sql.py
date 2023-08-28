@@ -26,7 +26,7 @@ class ConnectionSQLDatabase:
             conn = create_engine(url=self.__str_url(), echo=settings.DEBUG)
         except Exception as error:
             e = str(error)
-            logger.exception(f"Engine connection error: {e}")
+            logger.error(f"Engine connection error: {e}")
             raise SQLAlchemyError(f"Engine connection error: {e}")
         else:
             logger.info("Connected.")
@@ -38,7 +38,7 @@ class ConnectionSQLDatabase:
             Base.metadata.create_all(bind=self.__engine)
         except Exception as error:
             e = str(error)
-            logger.exception(f"Create tables error: {e}")
+            logger.error(f"Create tables error: {e}")
             raise SQLAlchemyError(f"Create tables error: {e}")
         finally:
             logger.info("Disconnecting from database...")
@@ -57,7 +57,7 @@ class ConnectionSQLDatabase:
             return session
         except Exception as error:
             e = str(error)
-            logger.exception(f"Session rollback: {e}")
+            logger.error(f"Session rollback: {e}")
             session.rollback()
             raise SQLAlchemyError(f"Session rollback: {e}")
         finally:

@@ -15,7 +15,7 @@ class FilterSQLRepository:
         stmt = insert(FilterModelSQL).values(value).returning(FilterModelSQL)
         result = self.session.scalars(stmt)
         self.session.commit()
-        logger.info("Data successfully saved.")
+        logger.info("All filters successfully saved.")
         return result.first()
 
     def add_filter(self, value: dict) -> FilterModelSQL:
@@ -23,39 +23,41 @@ class FilterSQLRepository:
         self.session.add(model)
         self.session.commit()
         self.session.refresh(model)
-        logger.info("Data successfully saved.")
+        logger.info("Filter successfully saved.")
         return model
 
-    def update_filter(self, _id: str, value: dict) -> Optional[FilterModelSQL]:
+    def update_filter(
+        self, filter_id: str, value: dict
+    ) -> Optional[FilterModelSQL]:
         stmt = (
             update(FilterModelSQL)
-            .where(FilterModelSQL.id == _id)
+            .where(FilterModelSQL.id == filter_id)
             .values(value)
             .returning(FilterModelSQL)
         )
         result = self.session.scalars(stmt)
         self.session.commit()
-        logger.info("Data updated successfully.")
+        logger.info("Filter updated successfully.")
         return result.first()
 
     def toggle_filter(
-        self, _id: str, action: bool
+        self, filter_id: str, action: bool
     ) -> Optional[FilterModelSQL]:
         stmt = (
             update(FilterModelSQL)
-            .where(FilterModelSQL.id == _id)
+            .where(FilterModelSQL.id == filter_id)
             .values({FilterModelSQL.is_active: action})
             .returning(FilterModelSQL)
         )
         result = self.session.scalars(stmt)
         self.session.commit()
-        logger.info("Status updated successfully.")
+        logger.info("Filter status updated successfully.")
         return result.first()
 
     def select_by_id(
-        self, _id: str, is_active: bool | None = None
+        self, filter_id: str, is_active: bool | None = None
     ) -> Optional[FilterModelSQL]:
-        stmt = select(FilterModelSQL).where(FilterModelSQL.id == _id)
+        stmt = select(FilterModelSQL).where(FilterModelSQL.id == filter_id)
         if is_active:
             stmt = stmt.where(FilterModelSQL.is_active == is_active)
         return self.session.scalars(stmt).first()

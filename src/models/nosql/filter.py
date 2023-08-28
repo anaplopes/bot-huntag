@@ -22,6 +22,5 @@ class FilterModelNoSQL(Document):
     dir_kit_name = BooleanField(default=False)
     is_active = BooleanField(default=True)
     created_at = DateTimeField(default=datetime.utcnow)
-    updated_at = DateTimeField(default=datetime.utcnow)
 
     meta = {"collection": "filters", "indexes": ["category"]}

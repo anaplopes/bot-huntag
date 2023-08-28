@@ -15,7 +15,7 @@ class KitSQLRepository:
         stmt = insert(KitModelSQL).values(value).returning(KitModelSQL)
         result = self.db.scalars(stmt)
         self.db.commit()
-        logger.info("Data successfully saved.")
+        logger.info("All kits successfully saved.")
         return result.first()
 
     def add_kit(self, value: dict) -> KitModelSQL:
@@ -23,31 +23,25 @@ class KitSQLRepository:
         self.db.add(model)
         self.db.commit()
         self.db.refresh(model)
-        logger.info("Data successfully saved.")
+        logger.info("Kit successfully saved.")
         return model
 
-    def update_kit(self, _id: str, value: dict) -> Optional[KitModelSQL]:
+    def update_kit(self, kit_id: int, value: dict) -> Optional[KitModelSQL]:
         stmt = (
             update(KitModelSQL)
-            .where(KitModelSQL.id == _id)
+            .where(KitModelSQL.kit_id == kit_id)
             .values(value)
             .returning(KitModelSQL)
         )
         result = self.db.scalars(stmt)
         self.db.commit()
-        logger.info("Data updated successfully.")
+        logger.info("Kit updated successfully.")
         return result.first()
 
-    def select_by_kit_id(self, kit_id: str) -> Optional[KitModelSQL]:
-        stmt = select(KitModelSQL).where(KitModelSQL.kit_id == kit_id)
-        return self.db.scalars(stmt).first()
-
     def select_by_id(
-        self, _id: str, is_active: bool | None = None
+        self, kit_id: int, is_active: bool | None = None
     ) -> Optional[KitModelSQL]:
-        stmt = select(KitModelSQL).where(KitModelSQL.id == _id)
-        if is_active:
-            stmt = stmt.where(KitModelSQL.is_active == is_active)
+        stmt = select(KitModelSQL).where(KitModelSQL.kit_id == kit_id)
         return self.db.scalars(stmt).first()
 
     def select_all(self) -> List[KitModelSQL]:

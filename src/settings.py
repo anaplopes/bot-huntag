@@ -4,7 +4,7 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    DEBUG: bool | str = os.getenv("DEBUG", False)
+    TYPE_DB: str = "NoSQL"
 
     HUNTAG_URL: str = os.getenv("HUNTAG_URL")
     HUNTAG_EMAIL: str = os.getenv("HUNTAG_EMAIL")

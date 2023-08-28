@@ -15,7 +15,7 @@ class Filter:
             logger.info(f"Filtered category {category_name}.")
 
         except Exception as e:
-            logger.exception(f"Filtered category error {category_name}")
+            logger.error(f"Filtered category error {category_name}")
             raise Exception(f"Filtered category error: {str(e)}")
 
     def subcategory(self, driver, index: int, subcategory_name: str) -> None:
@@ -31,7 +31,7 @@ class Filter:
                 logger.info(f"Filtered subcategory {subcategory_name}.")
 
         except Exception as e:
-            logger.exception(f"Filtered subcategory error {subcategory_name}")
+            logger.error(f"Filtered subcategory error {subcategory_name}")
             raise Exception(f"Filtered subcategory error: {str(e)}")
 
     def search(self, driver, row) -> None:
@@ -62,5 +62,5 @@ class Filter:
 
         except Exception as e:
             msg = f"Search Error: {str(e)}"
-            logger.exception(msg)
+            logger.error(msg)
             raise Exception(msg)

@@ -17,7 +17,7 @@ class ConnectionNoSQLDatabase:
             error_message = (
                 f"An unexpected error occurred during connection: {error}"
             )
-            logger.exception(error_message)
+            logger.error(error_message)
             raise MongoEngineException(error_message)
         else:
             logger.info("Connected to database.")

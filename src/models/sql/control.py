@@ -1,6 +1,6 @@
 import uuid
 
-from sqlalchemy import Column, DateTime, ForeignKey, Integer, String
+from sqlalchemy import Column, DateTime, Integer, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
 
@@ -11,7 +11,8 @@ class ControlModelSQL(Base):
     __tablename__ = "download_control"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    kit_id = Column(Integer, ForeignKey("kits_info.kit_id"))
+    kit_id = Column(Integer, nullable=False)
+    kit_creation_date = Column(String(10))
     file_name = Column(String(100), nullable=False)
     action = Column(String(20), nullable=False)
     status = Column(String(20), nullable=False)

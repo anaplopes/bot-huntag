@@ -10,7 +10,7 @@ class ConfLog(BaseModel):
     LOG_FORMAT: str = (
         "%(levelprefix)s %(asctime)s| %(module)s line %(lineno)d | %(message)s"
     )
-    LOG_LEVEL: str = "DEBUG"
+    LOG_LEVEL: str = "INFO"
 
     # Logging config
     version: int = 1

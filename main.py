@@ -9,17 +9,15 @@ from src.repository.nosql.kit import KitNoSQLRepository
 from src.repository.sql.control import ControlSQLRepository
 from src.repository.sql.filter import FilterSQLRepository
 from src.repository.sql.kit import KitSQLRepository
+from src.settings import settings
 from src.usecases.robot import Robot
 from src.utils.conflog import ConfLog
-
-TYPE_DB = "NoSQL"
-
 
 if __name__ == "__main__":
     # config log
     dictConfig(ConfLog().dict())
 
-    if TYPE_DB == "SQL":
+    if settings.TYPE_DB == "SQL":
         ConnectionSQLDatabase().create_data_model()
         migrate.data_filter(repo=FilterSQLRepository())
         Robot(
@@ -28,7 +26,7 @@ if __name__ == "__main__":
             repo_kit=KitSQLRepository(),
         ).execute()
 
-    if TYPE_DB == "NoSQL":
+    if settings.TYPE_DB == "NoSQL":
         ConnectionNoSQLDatabase()
         migrate.data_filter(repo=FilterNoSQLRepository())
         Robot(

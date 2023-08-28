@@ -24,5 +24,5 @@ class Driver:
 
         except Exception as e:
             msg = f"Driver error: {str(e)}"
-            logger.exception(msg)
+            logger.error(msg)
             raise Exception(msg)

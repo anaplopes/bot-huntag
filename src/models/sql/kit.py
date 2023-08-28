@@ -11,7 +11,7 @@ class KitModelSQL(Base):
     __tablename__ = "kits_info"
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    kit_id = Column(Integer, nullable=False, unique=True)
+    kit_id = Column(Integer, nullable=False)
     kit_name = Column(String(100), nullable=False)
     filter_to_kit = Column(String(500))
     kit_creation_date = Column(String(10))

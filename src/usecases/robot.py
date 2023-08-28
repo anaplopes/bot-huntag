@@ -2,6 +2,7 @@ import os
 import re
 import time
 from math import ceil
+from unicodedata import normalize
 
 from selenium.webdriver.common.by import By
 
@@ -74,12 +75,14 @@ class Robot:
         try:
             button.click()
         except Exception as e:
+            logger.info(f"Download failed: {str(e)}")
             value.update(
                 {"status": "error", "detail": f"Download failed: {str(e)}"}
             )
             self.repo_control.add_control(value=value)
             return False
         else:
+            logger.info("Downloaded file.")
             self.repo_control.add_control(value=value)
             return True
 
@@ -87,7 +90,6 @@ class Robot:
         self,
         kit_info: dict,
         title: str,
-        filename: str,
         dir_path: str,
         dir_kit_name: bool,
     ) -> None:
@@ -99,17 +101,30 @@ class Robot:
             "detail": "File moved successfully",
         }
         try:
-            dir_source = os.path.join(settings.PATH_DIR_SOURCE, filename)
-            dir_target = os.path.join(settings.PATH_DIR_TARGET, dir_path)
+            filename = f"{title.replace(' ', '+')}.png"
+            filename = normalize('NFKD', filename).encode('ASCII', 'ignore').decode('ASCII')
+            source = os.path.join(settings.PATH_DIR_SOURCE, filename)
+            target = os.path.join(settings.PATH_DIR_TARGET, dir_path)
             if dir_kit_name:
-                dir_target = os.path.join(
+                target = os.path.join(
                     settings.PATH_DIR_TARGET, dir_path, kit_info["kit_name"]
                 )
 
-            self.operation.create_dirs(dirname=dir_target)
-            self.operation.move_file(source=dir_source, destiny=dir_target)
+            while not self.operation.exists(path=source):
+                time.sleep(3)
+
+            self.operation.create_dirs(dirname=target)
+            moved = self.operation.move_file(source=source, destiny=target)
+            if moved:
+                logger.info("Moving file.")
+                self.repo_control.add_control(value=value)
+            else:
+                msg = "Unidentified failure to move the file"
+                logger.error(msg)
+                raise Exception(msg)
 
         except Exception as e:
+            logger.info(f"Failed to move the file: {str(e)}")
             value.update(
                 {
                     "status": "error",
@@ -117,31 +132,26 @@ class Robot:
                 }
             )
             self.repo_control.add_control(value=value)
-        else:
-            self.repo_control.add_control(value=value)
 
-    def get_file(self, driver, kit_info: dict, row):
+    def get_files(self, driver, kit_info: dict, row):
         list_img, list_title, list_button = self.list_files(driver=driver)
         for image, title, button in zip(list_img, list_title, list_button):
             cdr = "https://app.huntag.com.br/Images/FileTypes/cdr.png"
             pdf = "https://app.huntag.com.br/Images/FileTypes/pdf.png"
             src = image.get_attribute("src")
             if src != cdr and src != pdf:
-                title_text = title.text
-                logger.info(f"Downloading {title_text} ...")
+                title = (title.text).replace(chr(10), "_")
+                logger.info(f"Downloading {title} ...")
                 download = self.download_file(
                     button=button,
                     kit_info=kit_info,
-                    title=title_text,
+                    title=title,
                 )
                 if download:
-                    logger.info(f"Moving file {title_text} ...")
-                    filename = f"{title_text.replace(' ', '+').replace(chr(10), '_')}.png"
-                    time.sleep(120)  # 2 minutos
+                    logger.info(f"Moving file {title} ...")
                     self.move_file(
-                        kit_id=kit_info,
-                        title=title_text,
-                        filename=filename,
+                        kit_info=kit_info,
+                        title=title,
                         dir_path=os.path.join(
                             row.subcategory4,
                             row.subcategory5,
@@ -181,14 +191,28 @@ class Robot:
                     records[idx].click()
 
                     time.sleep(3)
+                    logger.info("Saving kit information ...")
                     kit_info = Kit().kit_info(driver=driver)
-                    get_kit = self.repo_kit.select_by_kit_id(
+                    kit_coll = self.repo_kit.select_by_id(
                         kit_id=kit_info["kit_id"]
                     )
-                    if not get_kit:
+                    if (
+                        not kit_coll
+                        or kit_coll.kit_creation_date
+                        != kit_info["kit_creation_date"]
+                    ):
                         self.repo_kit.add_kit(value=kit_info)
 
-                    self.get_file(driver=driver, kit_info=kit_info, row=row)
+                    logger.info("Validate if file has been downloaded ...")
+                    control_coll = self.repo_control.select_by_status(
+                        kit_id=kit_info["kit_id"],
+                        kit_creation_date=kit_info["kit_creation_date"],
+                        action="download_file",
+                        status="success"
+                    )
+                    if not control_coll:
+                        logger.info("Getting files ...")
+                        self.get_files(driver=driver, kit_info=kit_info, row=row)
 
                     logger.info("Returning to list of records page ...")
                     self.returning_page(driver=driver)
@@ -214,7 +238,7 @@ class Robot:
 
         except Exception as e:
             error = str(e)
-            logger.exception(error)
+            logger.error(error)
             return error
 
         finally:
